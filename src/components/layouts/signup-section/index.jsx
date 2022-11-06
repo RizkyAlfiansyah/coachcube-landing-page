@@ -175,7 +175,7 @@ const SignUp = ({ ref }) => {
                                 filled={!values.country_code}
                             />
                             <Input
-                                type="tel"
+                                type="number"
                                 placeholder="Phone Number"
                                 value={values.phone}
                                 className="w-9/12"
