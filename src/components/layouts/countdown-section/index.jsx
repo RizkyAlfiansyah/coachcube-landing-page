@@ -35,7 +35,7 @@ const CountDown = () => {
                                             </div>
                                         </div>
                                         <div className="flex justify-start items-start gap-40">
-                                            <p className="text-white text-[8px] font-400 leading-[9px]">
+                                            <p className="text-white text-[8px] font-400 leading-[9px] lg:text-24 lg:leading-28">
                                                 {timevariabels[index]}
                                             </p>
                                         </div>
