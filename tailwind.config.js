@@ -8,8 +8,24 @@ module.exports = {
   theme: {
     extend: {
       width: {
+        1: "1px",
         40: "169px",
         72: "280px",
+        78: "78px",
+        140: "140px",
+        116: "116px",
+        160: "160px",
+        720: "720px",
+        636: "636px",
+        120: "calc(40vw + 110px)",
+      },
+      height: {
+        497: "497px",
+      },
+      padding: {
+        45: "45px",
+        86: "86px",
+        497: "497px",
       },
       colors: {
         primary: {
@@ -21,11 +37,17 @@ module.exports = {
           300: "#EFAA5A",
           350: "#B9b9b9",
           400: "#243A41",
+          450: "#5A8FAB",
           500: "#132C56",
+          550: "#F5F7FD",
           600: "#6A7893",
+          650: "#C0c4c9",
           700: "#263E60",
+          750: "#0D1A32",
           800: "#D8D8D8",
+          850: "#D9D9D9",
           900: "#8299C3",
+          950: "#9CA3B9",
         },
       },
       fontSize: {
@@ -33,19 +55,25 @@ module.exports = {
         16: "16px",
         20: "20px",
         24: "24px",
+        28: "28px",
         32: "32px",
         40: "40px",
         48: "48px",
         54: "54px",
+        128: "128px",
       },
       lineHeight: {
+        22: "22px",
         25: "25px",
         28: "28px",
         32: "32px",
+        36: "36px",
+        41: "41px",
         51: "51px",
         61: "61px",
         80: "80px",
         81: "81px",
+        128: "128px",
       },
       fontWeight: {
         900: "900",
@@ -55,17 +83,27 @@ module.exports = {
       },
       height: {
         80: "calc(100vh - 95px)",
+        40: "50vh",
+        140: "140vh",
       },
       borderRadius: {
         lg: "10px",
+        "4xl": "36px",
       },
       gap: {
         2: "6px",
+        2.5: "9px",
+      },
+      borderWidth: {
+        1: "1px",
       },
       backgroundImage: {
         hero: 'linear-gradient(180deg, #FFFFFF -2.34%, rgba(247, 247, 247, 0) 100%), url("/bg-hero.png")',
-        gradientPrimary:
-          "linear-gradient(180deg, #FFFFFF -2.34%, rgba(247, 247, 247, 0) 100%)",
+        countdown: 'url("/bg-countdown.png")',
+        polygon: 'url("/polygon.png")',
+      },
+      fontFamily: {
+        sharetech: ["Share Tech"],
       },
     },
   },

@@ -7,7 +7,9 @@ import UniversitySVG from "assets/icons/icon-university.svg";
 import CommunitySVG from "assets/icons/icon-community.svg";
 import ExamSVG from "assets/icons/icon-exam.svg";
 
-const Hero = () => {
+const Hero = ({
+    onClick = () => { },
+}) => {
 
     const icons = [
         {
@@ -50,7 +52,9 @@ const Hero = () => {
                     Industry Experts
                 </h1>
                 <div className="w-6/12 flex items-center justify-center mt-11">
-                    <button className="w-72 flex items-center justify-center text-center py-4 px-6 font-bold text-white text-20 leading-25 bg-primary-100 rounded-lg hover:shadow-xl">
+                    <button className="w-72 flex items-center justify-center text-center py-4 px-6 font-bold text-white text-20 leading-25 bg-primary-100 rounded-lg hover:shadow-xl"
+                        onClick={onClick}
+                    >
                         Sign Up
                     </button>
                 </div>
