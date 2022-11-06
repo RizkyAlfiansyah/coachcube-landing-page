@@ -108,7 +108,7 @@ const SignUp = ({ ref }) => {
                 <div className="w-full flex lg:justify-start justify-center lg:items-start items-center">
                     <div className="w-28 h-1 rounded-sm bg-primary-300" />
                 </div>
-                <div className="lg:w-720 w-full relative flex flex-col lg:justify-start justify-center lg:items-start items-center">
+                <div className="lg:w-720 w-full relative flex flex-col lg:justify-start justify-center lg:items-start items-center xl:ml-40">
                     <Image src={SignUpBG} alt="sign up" className='z-20' />
                     <div className='hidden lg:flex w-[50px] h-[68px] lg:absolute right-[118px] -bottom-[67px] z-10'>
                         <Image src={PolygonBG} alt="sign up" />

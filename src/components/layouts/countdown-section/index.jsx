@@ -24,7 +24,7 @@ const CountDown = () => {
                     <div className='w-full flex justify-center items-center lg:gap-6 gap-0'>
                         {
                             Array(4).fill(0).map((_, index) => (
-                                <div className={`w-full flex ${index !== 3 ? "items-center justify-center" : "items-center justify-around"} lg:gap-6 gap-3`} key={index}>
+                                <div className={`w-full lg:w-auto flex ${index !== 3 ? "items-center justify-center" : "items-center justify-around"} lg:gap-6 gap-3`} key={index}>
                                     <div className="lg:w-160 flex flex-col justify-center items-center gap-2.5">
                                         <div className="flex justify-start items-start gap-2">
                                             <div className="lg:p-2 p-1 text-black font-400 lg:text-9xl lg:leading-128 text-40 leading-41 bg-white rounded-lg font-sharetech text-center">
