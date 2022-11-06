@@ -21,17 +21,17 @@ const CountDown = () => {
 
     return (
         <>
-            <div className="w-full h-40 flex flex-col items-start justify-center px-24 gap-4">
-                <div className="w-full flex justify-between items-start border-b-1 border-primary-250 pb-6">
-                    <div className="flex justify-start items-start gap-2.5">
+            <div className="w-full lg:h-40 flex flex-col items-start justify-center lg:px-24 lg:py-0 gap-4 px-6 py-12">
+                <div className="w-full flex lg:flex-row flex-col justify-between items-start border-b-1 border-primary-250 pb-6 lg:gap-0 gap-8">
+                    <div className="flex lg:flex-row flex-col lg:justify-start lg:items-start justify-center items-center gap-2.5">
                         <div>
                             <Image src={LogoSVG} alt="logo" />
                         </div>
-                        <p className="w-636 font-400 text-16 leading-28 text-primary-600">
+                        <p className="lg:w-636 font-400 text-16 leading-28 text-primary-600 lg:text-start text-center">
                             Coachcube is an artificial intelligence education technology platform that connects student and those in the early stages of their career with indsutry professional for the purposes of mentoring via online video tele conference.
                         </p>
                     </div>
-                    <div className="flex flex-col justify-start items-start gap-5">
+                    <div className="w-full lg:w-auto flex flex-col lg:justify-start lg:items-start justify-center items-center gap-5">
                         <div className="flex gap-5 justify-start items-center">
                             <div>
                                 <Image src={LocationSVG} alt="logo" />
@@ -50,11 +50,11 @@ const CountDown = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col justify-start items-start gap-2.5">
+                <div className="w-full flex flex-col lg:justify-start lg:items-start justify-center items-center gap-2.5">
                     <p className="font-400 text-14 leading-22 text-primary-100 opacity-50">
                         Connect with us
                     </p>
-                    <div className="flex justify-start items-start gap-4">
+                    <div className="flex lg:justify-start lg:items-start gap-4 justify-center items-center">
                         {
                             Array(socials.length).fill(0).map((_, index) => (
                                 <div key={index} className="cursor-pointer">

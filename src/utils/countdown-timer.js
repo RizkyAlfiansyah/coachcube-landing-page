@@ -26,22 +26,45 @@ const getReturnValues = (countDown) => {
   );
   var minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((countDown % (1000 * 60)) / 1000);
-  if (days.toString().length === 1) {
-    days = "0" + days;
-  } else if (hours.toString().length === 1) {
-    hours = "0" + hours;
-  } else if (minutes.toString().length === 1) {
-    minutes = "0" + minutes;
-  } else if (seconds.toString().length === 1) {
-    seconds = "0" + seconds;
-  } else {
-    days = days;
-    hours = hours;
-    minutes = minutes;
-    seconds = seconds;
+
+  days = days.toString().split("");
+  hours = hours.toString().split("");
+  minutes = minutes.toString().split("");
+  seconds = seconds.toString().split("");
+
+  if (seconds.length === 1) {
+    seconds.unshift("0");
+  }
+  if (minutes.length === 1) {
+    minutes.unshift("0");
+  }
+  if (hours.length === 1) {
+    hours.unshift("0");
+  }
+  if (days.length === 1) {
+    days.unshift("0");
   }
 
-  return [days, hours, minutes, seconds];
+  //   if (days.toString().length === 1) {
+  //     days = "0" + days;
+  //   } else if (hours.toString().length === 1) {
+  //     hours = "0" + hours;
+  //   } else if (minutes.toString().length === 1) {
+  //     minutes = "0" + minutes;
+  //   } else if (seconds.toString().length === 1) {
+  //     seconds = "0" + seconds;
+  //   } else {
+  //     days = days;
+  //     hours = hours;
+  //     minutes = minutes;
+  //     seconds = seconds;
+  //   }
+
+  const times = [days, hours, minutes, seconds];
+
+  // console.log("times", times);
+
+  return times;
 };
 
 export { useCountdown };

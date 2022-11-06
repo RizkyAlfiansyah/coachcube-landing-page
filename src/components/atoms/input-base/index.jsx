@@ -8,6 +8,7 @@ const Input = ({
     className,
     onChange = () => { },
     required = false,
+    errorMessage = '',
 }) => {
     if (type === 'textarea') {
         return (
@@ -22,7 +23,7 @@ const Input = ({
         )
     } else {
         return (
-            <div className={`${className} flex flex-col gap-3`}>
+            <div className={`${className} flex flex-col gap-[2px]`}>
                 <input
                     type={type}
                     pattern={type === 'tel' || type === 'number' ? '[0-9]' : ''}
@@ -35,6 +36,13 @@ const Input = ({
                 //     e.preventDefault()
                 // }}
                 />
+                {
+                    errorMessage && (
+                        <p className='font-400 text-14 leading-28 text-red-500'>
+                            {errorMessage}
+                        </p>
+                    )
+                }
             </div>
         )
     }
