@@ -77,28 +77,32 @@ const SecondSection = () => {
                     ))
                 }
                 {
-                    Array(icons.length).fill().map((_, index) => (
+                    Array(6).fill().map((_, index) => (
                         <div className="lg:hidden w-40 h-14" key={index}>
                             <Image src={icons[index]} alt={index} />
                         </div>
                     ))
                 }
             </div>
-            <div className="md:hidden w-full flex flex-col items-center justify-center gap-10">
+            <div className="md:hidden w-full flex flex-wrap items-center justify-center gap-5 my-8">
                 {
-                    Array(5).fill().map((_, index) => (
+                    Array(icons.length).fill().map((_, index) => (
                         <div className="w-40 h-14" key={index}>
                             <Image src={icons[index]} alt={index} />
                         </div>
                     ))
                 }
             </div>
-            <div className="flex gap-2">
-                <div className="w-7 h-2 bg-primary-700 rounded-md" />
-                <div className="w-2 h-2 bg-primary-700 bg-opacity-40 rounded-full" />
-                <div className="w-2 h-2 bg-primary-700 bg-opacity-40 rounded-full" />
-                <div className="w-2 h-2 bg-primary-700 bg-opacity-40 rounded-full" />
-            </div>
+            {
+                icons.length > 10 && (
+                    <div className="flex gap-2">
+                        <div className="w-7 h-2 bg-primary-700 rounded-md" />
+                        <div className="w-2 h-2 bg-primary-700 bg-opacity-40 rounded-full" />
+                        <div className="w-2 h-2 bg-primary-700 bg-opacity-40 rounded-full" />
+                        <div className="w-2 h-2 bg-primary-700 bg-opacity-40 rounded-full" />
+                    </div>
+                )
+            }
         </>
     )
 }

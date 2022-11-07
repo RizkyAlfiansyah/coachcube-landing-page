@@ -175,12 +175,12 @@ const SignUp = ({ ref }) => {
                                     className="w-full"
                                     onChange={(e) => setValues({ ...values, email: e.target.value })}
                                     required
-                                    errorMessage={error.email}
+                                    errorMessage={error?.email}
                                 />
                                 {
-                                    error.email && (
+                                    error?.email && (
                                         <p className='lg:hidden font-400 text-14 leading-28 text-red-500'>
-                                            {error.email}
+                                            {error?.email}
                                         </p>
                                     )
                                 }
@@ -192,7 +192,7 @@ const SignUp = ({ ref }) => {
                                         className="w-1/2"
                                         onChange={(e) => setValues({ ...values, first_name: e.target.value })}
                                         required
-                                        errorMessage={error.first_name || error.last_name}
+                                        errorMessage={error?.first_name || error?.last_name}
                                     />
                                     <Input
                                         type="text"
@@ -201,13 +201,13 @@ const SignUp = ({ ref }) => {
                                         className="w-1/2"
                                         onChange={(e) => setValues({ ...values, last_name: e.target.value })}
                                         required
-                                        errorMessage={error.first_name && ""}
+                                        errorMessage={error?.first_name && ""}
                                     />
                                 </div>
                                 {
-                                    error.first_name && (
+                                    error?.first_name && (
                                         <p className='lg:hidden font-400 text-14 leading-28 text-red-500'>
-                                            {error.first_name || error.last_name}
+                                            {error?.first_name || error?.last_name}
                                         </p>
                                     )
                                 }
@@ -242,13 +242,13 @@ const SignUp = ({ ref }) => {
                                         className="w-9/12"
                                         onChange={(e) => setValues({ ...values, phone: e.target.value })}
                                         required={tabs === 1}
-                                        errorMessage={error.phone == "The phone field is required." ? "Phone number cannot be empty." : error.phone}
+                                        errorMessage={error?.phone == "The phone field is required." ? "Phone number cannot be empty." : error?.phone}
                                     />
                                 </div>
                                 {
-                                    error.phone && (
+                                    error?.phone && (
                                         <p className='lg:hidden font-400 text-14 leading-28 text-red-500'>
-                                            {error.phone == "The phone field is required." ? "Phone number cannot be empty." : error.phone}
+                                            {error?.phone == "The phone field is required." ? "Phone number cannot be empty." : error?.phone}
                                         </p>
                                     )
                                 }
@@ -272,12 +272,12 @@ const SignUp = ({ ref }) => {
                                     }}
                                     required={tabs === 1}
                                     filled={values.industry_id}
-                                    errorMessage={error.industry_id && "Please choose one industry."}
+                                    errorMessage={error?.industry_id && "Please choose one industry."}
                                 />
                                 {
-                                    error.industry_id && (
+                                    error?.industry_id && (
                                         <p className='lg:hidden font-400 text-14 leading-28 text-red-500'>
-                                            {error.industry_id && "Please choose one industry."}
+                                            {error?.industry_id && "Please choose one industry."}
                                         </p>
                                     )
                                 }

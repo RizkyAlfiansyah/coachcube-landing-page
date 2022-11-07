@@ -42,7 +42,11 @@ const Hero = ({
     const [index, setIndex] = useState(0);
     const timeoutRef = useRef(null);
     const delay = 2500;
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useState({
+        id: 1,
+        icon: ExamSVG,
+        desc: "On demand 1-on-1 video calls with industry experts",
+    });
 
     const resetTimeout = () => {
         if (timeoutRef.current) {
@@ -106,16 +110,18 @@ const Hero = ({
                 <div
                     className="w-48 flex flex-col gap-1 justify-between items-center"
                 >
-                    <Image src={items.icon} alt={1} />
-                    <p className="font-400 text-16 leading-28 text-center text-white">
-                        {items.desc}
-                    </p>
+                    {
+                        items !== [] && (
+                            <>
+                                <Image src={items?.icon} alt={items?.desc} />
+                                <p className="font-400 text-16 leading-28 text-center text-white">
+                                    {items?.desc}
+                                </p>
+                            </>
+                        )
+                    }
                 </div>
                 <div className="flex gap-2">
-                    {/* <div className="w-7 h-2 bg-primary-580 rounded-md" />
-                    <div className="w-2 h-2 bg-primary-580 bg-opacity-40 rounded-full" />
-                    <div className="w-2 h-2 bg-primary-580 bg-opacity-40 rounded-full" />
-                    <div className="w-2 h-2 bg-primary-580 bg-opacity-40 rounded-full" /> */}
                     {
                         icons?.map((item, idx) => (
                             <div className='flex gap-2' key={idx}>
