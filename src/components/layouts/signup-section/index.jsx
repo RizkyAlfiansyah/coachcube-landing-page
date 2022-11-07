@@ -111,7 +111,7 @@ const SignUp = ({ ref }) => {
                     <Image src={tabs === 0 ? SignUpBG : SignUpMaleBG} alt="sign up" className='z-20' />
                 </div>
             </div>
-            <div className="lg:w-7/12 w-full lg:h-full h-3/4 flex flex-col justify-start items-center bg-white xl:p-24 xl:pb-4 lg:pb-4 lg:py-12 xl:pl-36 lg:pr-6 lg:px-14 py-8 pt-56 md:pt-96 md:px-20 px-6 overflow-auto">
+            <div className="lg:w-7/12 w-full lg:h-full h-3/4 flex flex-col justify-start items-center bg-white xl:p-24 xl:pb-4 lg:pb-4 lg:py-12 xl:pl-36 lg:pr-6 lg:px-14 py-8 pt-56 md:pt-96 sm:pt-[400px] md:px-20 px-6 overflow-auto">
                 {
                     !success ? (
                         <div className="w-full h-full flex flex-col justify-start items-start gap-8 overflow-auto">

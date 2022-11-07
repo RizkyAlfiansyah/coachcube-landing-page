@@ -13,7 +13,7 @@ const CountDown = () => {
 
     return (
         <>
-            <div className="w-full lg:h-screen h-full bg-countdown bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center gap-8 xl:px-64 lg:px-20 px-6 md:px-44">
+            <div className="w-full lg:h-screen h-full bg-countdown bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center gap-8 xl:px-64 lg:px-20 px-6 sm:px-48">
                 <p className="font-bold lg:text-48 text-24 lg:leading-61 leading-31 text-white text-center">
                     A HOME FOR HIGH ACHIVERS
                 </p>
