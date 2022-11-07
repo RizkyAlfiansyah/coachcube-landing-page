@@ -15,7 +15,7 @@ const Home = () => {
         <Hero onClick={_handleRef} />
       </section>
       {/* second Section */}
-      <section className="w-full flex flex-col lg:h-[80vh] h-screen items-center justify-between xl:py-20 lg:px-28 py-8 px-6 md:px-12 md:py-8 bg-primary-50">
+      <section className="w-full flex flex-col lg:h-[80vh] h-screen items-center justify-between xl:py-20 lg:px-8 py-8 px-6 md:px-12 md:py-8 bg-primary-50">
         <SecondSection />
       </section>
       <section className="w-full flex lg:flex-row flex-col lg:h-[120vh] items-center justify-between" ref={ref}>

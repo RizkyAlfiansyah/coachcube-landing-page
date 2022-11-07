@@ -98,6 +98,18 @@ const SignUp = ({ ref }) => {
         }
     };
 
+    const emptyValues = () => {
+        setValues({
+            industry_id: '',
+            first_name: '',
+            last_name: '',
+            email: '',
+            country_code: '+44',
+            phone: '',
+            message: '',
+        });
+    }
+
     return (
         <>
             <div className="relative lg:w-5/12 w-full xl:h-full lg:h-full h-96 flex flex-col lg:gap-8 gap-6 justify-start items-start bg-primary-710 xl:px-20 px-5 xl:py-16 py-12" ref={ref}>
@@ -120,6 +132,11 @@ const SignUp = ({ ref }) => {
                                     onClick={() => {
                                         setTabs(0)
                                         setError([])
+                                        emptyValues()
+                                        setString({
+                                            ...string,
+                                            categories: 'Industry'
+                                        })
                                     }}
                                 >
                                     <p className={`font-400 lg:text-24 text-16 lg:leading-32 leading-22 text-primary-100 ${tabs === 1 && "opacity-50"}`}>Find a Mentor</p>
@@ -136,6 +153,11 @@ const SignUp = ({ ref }) => {
                                     onClick={() => {
                                         setTabs(1)
                                         setError([])
+                                        emptyValues()
+                                        setString({
+                                            ...string,
+                                            categories: 'Industry'
+                                        })
                                     }}>
                                     <p className={`lg:font-400 font-500 lg:text-24 text-16 lg:leading-32 leading-22 text-primary-100 ${tabs === 0 && "opacity-50"}`}>Become a Mentor</p>
                                     {
@@ -211,7 +233,7 @@ const SignUp = ({ ref }) => {
                                                 phoneCode: value.values
                                             })
                                         }}
-                                        filled={!values.country_code}
+                                        filled={values.country_code}
                                     />
                                     <Input
                                         type="number"
@@ -249,7 +271,7 @@ const SignUp = ({ ref }) => {
                                         })
                                     }}
                                     required={tabs === 1}
-                                    filled={!values.industry_id}
+                                    filled={values.industry_id}
                                     errorMessage={error.industry_id && "Please choose one industry."}
                                 />
                                 {

@@ -28,7 +28,7 @@ const SelectInput = ({
                 className={`${errorMessage ? "border-red-500" : "border-primary-550"} w-full flex gap-2.5 justify-between cursor-pointer hover:shadow-lg items-center py-5 px-4 bg-primary-550 border-1 focus:ring-0 focus:outline-none rounded-lg z-10`}
                 onClick={onClick}
             >
-                <p className={`${filled && "text-primary-950"} text-20 font-400 leading-25`}>
+                <p className={`${!filled && "text-primary-950"} text-20 font-400 leading-25`}>
                     {text} <span className={`${required && text === "Industry" ? "text-red-500" : "hidden"}`}>*</span>
                 </p>
                 <div className={`${collapse && "rotate-180"}`}>

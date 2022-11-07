@@ -64,21 +64,21 @@ const SecondSection = () => {
                 <p className="w-full text-center font-bold xl:text-48 text-24 xl:leading-61 leading-31 text-primary-100">
                     Our Mentors
                 </p>
-                <p className="w-full text-center font-400 xl:text-20 text-16 leading-32 text-primary-600 lg:px-10">
+                <p className="w-full text-center font-400 lg:text-20 text-16 leading-32 text-primary-600 lg:px-44 md:px-14 xl:px-28">
                     Our mentors are industry leading experts who are passionate about helping to educate and inpire the next generation.
                 </p>
             </div>
-            <div className="hidden w-full md:grid xl:grid-cols-5 md:grid-cols-3 items-center justify-center xl:gap-20 gap-10">
+            <div className="hidden w-full md:grid lg:grid-cols-5 md:grid-cols-3 items-center justify-center xl:gap-20 lg:gap-10 gap-10">
                 {
                     Array(icons.length).fill().map((_, index) => (
-                        <div className="hidden xl:flex w-40 h-14" key={index}>
+                        <div className="hidden lg:flex w-40 h-14" key={index}>
                             <Image src={icons[index]} alt={index} />
                         </div>
                     ))
                 }
                 {
                     Array(icons.length).fill().map((_, index) => (
-                        <div className="xl:hidden w-40 h-14" key={index}>
+                        <div className="lg:hidden w-40 h-14" key={index}>
                             <Image src={icons[index]} alt={index} />
                         </div>
                     ))
