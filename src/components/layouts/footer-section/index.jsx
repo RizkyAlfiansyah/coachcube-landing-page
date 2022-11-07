@@ -21,17 +21,17 @@ const CountDown = () => {
 
     return (
         <>
-            <div className="w-full xl:h-40 flex flex-col items-start justify-center xl:px-24 xl:py-0 gap-4 px-6 py-12">
-                <div className="w-full flex xl:flex-row flex-col justify-between items-start border-b-1 border-primary-250 pb-6 xl:gap-0 gap-8">
-                    <div className="flex xl:flex-row flex-col xl:justify-start xl:items-start justify-center items-center gap-2.5">
+            <div className="w-full lg:h-40 flex flex-col items-start justify-start xl:px-24 xl:py-[72px] gap-4 px-6 py-12">
+                <div className="w-full flex lg:flex-row flex-col justify-between items-start border-b-1 border-primary-250 pb-6 xl:gap-0 gap-8">
+                    <div className="md:w-full lg:w-auto flex md:flex-row flex-col lg:justify-start md:justify-between lg:items-start justify-center items-center gap-2.5 md:gap-6 lg:gap-2.5">
                         <div>
                             <Image src={LogoSVG} alt="logo" />
                         </div>
-                        <p className="xl:w-636 font-400 text-16 leading-28 text-primary-600 xl:text-start text-center">
+                        <p className="xl:w-636 md:w-[606px] font-400 text-16 leading-28 text-primary-600 md:text-start text-center">
                             Coachcube is an artificial intelligence education technology platform that connects student and those in the early stages of their career with indsutry professional for the purposes of mentoring via online video tele conference.
                         </p>
                     </div>
-                    <div className="w-full xl:w-auto flex flex-col xl:justify-start xl:items-start justify-center items-center gap-5">
+                    <div className="w-full lg:w-auto flex flex-col lg:justify-start lg:items-start md:flex-row lg:flex-col md:w-full md:justify-between justify-center items-center gap-5">
                         <div className="flex gap-5 justify-start items-center">
                             <div>
                                 <Image src={LocationSVG} alt="logo" />

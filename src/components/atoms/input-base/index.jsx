@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Input = ({
     type,
@@ -10,6 +10,7 @@ const Input = ({
     required = false,
     errorMessage = '',
 }) => {
+
     if (type === 'textarea') {
         return (
             <textarea
@@ -23,22 +24,32 @@ const Input = ({
         )
     } else {
         return (
-            <div className={`${className} flex flex-col gap-[2px]`}>
-                <input
-                    type={type}
-                    pattern={type === 'tel' || type === 'number' ? '[0-9]' : ''}
-                    placeholder={placeholder}
-                    className={`w-full py-5 px-4 bg-primary-550 border-1 ${required ? "border-red-500" : "border-primary-550"} focus:ring-0 focus:outline-none rounded-lg text-20 font-400 leading-25`}
-                    value={value}
-                    onChange={onChange}
-                    required={required}
-                // onKeyDown={(e) => {
-                //     e.preventDefault()
-                // }}
-                />
+            <div className={`${className} relative flex flex-col gap-[2px]`}>
+                <div className={`w-full relative flex flex-col gap-[2px]`}>
+                    <div className={`w-full relative flex flex-col gap-[2px]`}>
+                        <input
+                            type={type}
+                            pattern={type === 'tel' || type === 'number' ? '[0-9]' : ''}
+                            // placeholder={placeholder}
+                            className={`w-full py-5 px-4 bg-primary-550 border-1 ${errorMessage ? "border-red-500" : "border-primary-550"} focus:ring-0 focus:outline-none rounded-lg text-20 font-400 leading-25`}
+                            value={value}
+                            onChange={onChange}
+                            required={required}
+                        />
+                    </div>
+                    {
+                        !value && (
+                            <p className='absolute top-1/3 left-5 text-20 font-400 leading-25 text-primary-950'>
+                                {placeholder}<span className={
+                                    `${required ? "text-red-500" : "hidden"}`
+                                }>*</span>
+                            </p>
+                        )
+                    }
+                </div>
                 {
                     errorMessage && (
-                        <p className='font-400 text-14 leading-28 text-red-500'>
+                        <p className='hidden lg:flex font-400 text-14 leading-28 text-red-500'>
                             {errorMessage}
                         </p>
                     )
