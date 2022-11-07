@@ -22,7 +22,7 @@ const SignUp = ({ ref }) => {
     const [category, setCategory] = useState([]);
     const [string, setString] = useState({
         phoneCode: '+44',
-        categories: 'Industry (Your Expertise)',
+        categories: 'Industry',
     });
     const [tabs, setTabs] = useState(0);
     const [success, setSuccess] = useState(false);
@@ -231,7 +231,7 @@ const SignUp = ({ ref }) => {
                                     )
                                 }
                                 <SelectInput
-                                    text="Industry"
+                                    text={string.categories}
                                     data={categories}
                                     className="w-full"
                                     collapse={collapseCategory}

@@ -77,7 +77,7 @@ const SecondSection = () => {
                     ))
                 }
                 {
-                    Array(6).fill().map((_, index) => (
+                    Array(icons.length).fill().map((_, index) => (
                         <div className="xl:hidden w-40 h-14" key={index}>
                             <Image src={icons[index]} alt={index} />
                         </div>
