@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import LogoSVG from "assets/icons/icon-coachcube.svg";
+import LogoPNG from "assets/icons/icon-coachcube.png";
 import VcallSVG from "assets/icons/icon-vcall.svg";
 import BriefCaseSVG from "assets/icons/icon-briefcase.svg";
 import UniversitySVG from "assets/icons/icon-university.svg";
@@ -68,13 +69,13 @@ const Hero = ({
     return (
         <>
             <div className="w-full flex items-center justify-center">
-                <Image src={LogoSVG} alt="Logo" width={367} />
+                <Image src={LogoPNG} alt="Logo" width={367} />
             </div>
-            <div className="lg:w-6/12 w-full flex flex-col items-center justify-center">
-                <h1 className="lg:text-48 text-24 lg:font-normal font-bold text-primary-500 text-center lg:leading-80 leading-32 bg-primary-350 bg-opacity-50 lg:px-6 py-5 px-4 rounded-lg">
+            <div className="xl:w-6/12 w-full flex flex-col items-center justify-center">
+                <h1 className="xl:text-48 text-24 xl:font-normal font-bold text-primary-500 text-center xl:leading-80 leading-32 bg-primary-350 bg-opacity-50 xl:px-6 py-5 px-4 rounded-lg">
                     1-on-1 Mentorship From
                 </h1>
-                <h1 className="lg:text-48 text-24 lg:font-normal font-bold text-primary-500 text-center lg:leading-80 leading-32 bg-primary-350 bg-opacity-50 lg:px-6 py-5 px-4 rounded-b-lg">
+                <h1 className="xl:text-48 text-24 xl:font-normal font-bold text-primary-500 text-center xl:leading-80 leading-32 bg-primary-350 bg-opacity-50 xl:px-6 py-5 px-4 rounded-b-lg">
                     Industry Experts
                 </h1>
                 <div className="w-6/12 flex items-center justify-center mt-11">
@@ -85,7 +86,7 @@ const Hero = ({
                     </button>
                 </div>
             </div>
-            <div className="hidden w-full lg:flex items-center justify-around gap-20 bg-primary-200 bg-opacity-80 py-5 px-24">
+            <div className="hidden w-full xl:flex items-center justify-around gap-20 bg-primary-200 bg-opacity-80 py-5 px-24">
                 {icons.map((item) => (
                     <div
                         className="w-48 flex flex-col gap-1 justify-between items-center"
@@ -98,7 +99,7 @@ const Hero = ({
                     </div>
                 ))}
             </div>
-            <div className="w-full lg:h-auto h-64 flex flex-col lg:hidden items-center lg:justify-center justify-between lg:gap-20 gap-5 bg-primary-200 bg-opacity-80 py-5 px-24">
+            <div className="w-full xl:h-auto h-64 flex flex-col xl:hidden items-center xl:justify-center justify-between xl:gap-20 gap-5 bg-primary-200 bg-opacity-80 py-5 px-24">
                 <div
                     className="w-48 flex flex-col gap-1 justify-between items-center"
                 >

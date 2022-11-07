@@ -101,30 +101,30 @@ const SignUp = ({ ref }) => {
 
     return (
         <>
-            <div className="relative lg:w-5/12 w-full lg:h-screen h-96 flex flex-col lg:gap-8 gap-6 justify-start items-start lg:bg-primary-700 bg-primary-720 lg:px-20 px-5 lg:py-16 py-12" ref={ref}>
-                <p className="lg:text-start font-bold lg:text-28 text-24 lg:leading-36 leading-31 text-white text-center lg:px-0 px-4">
+            <div className="relative xl:w-5/12 w-full xl:h-screen h-96 flex flex-col xl:gap-8 gap-6 justify-start items-start xl:bg-primary-700 bg-primary-720 xl:px-20 px-5 xl:py-16 py-12" ref={ref}>
+                <p className="xl:text-start font-bold xl:text-28 text-24 xl:leading-36 leading-31 text-white text-center xl:px-0 px-4">
                     Raise money for causes you believe in by becoming a mentor
                 </p>
-                <div className="w-full flex lg:justify-start justify-center lg:items-start items-center">
+                <div className="w-full flex xl:justify-start justify-center xl:items-start items-center">
                     <div className="w-28 h-1 rounded-sm bg-primary-300" />
                 </div>
-                <div className="lg:w-720 w-full relative flex flex-col lg:justify-start justify-center lg:items-start items-center">
+                <div className="xl:w-720 w-full relative flex flex-col xl:justify-start justify-center xl:items-start items-center">
                     <Image src={SignUpBG} alt="sign up" className='z-20' />
-                    <div className='hidden lg:flex w-[50px] h-[68px] lg:absolute right-[118px] -bottom-[67px] z-10'>
+                    <div className='hidden xl:flex w-[50px] h-[68px] xl:absolute right-[118px] -bottom-[67px] z-10'>
                         <Image src={PolygonBG} alt="sign up" />
                     </div>
                 </div>
             </div>
-            <div className="lg:w-7/12 w-full lg:h-full h-3/4 flex flex-col justify-start items-center bg-white lg:p-24 lg:py-16 py-8 pt-44 md:pt-60 lg:pt-0 px-6">
+            <div className="xl:w-7/12 w-full xl:h-full h-3/4 flex flex-col justify-start items-center bg-white xl:p-24 xl:py-16 py-8 pt-44 md:pt-60 xl:pt-0 px-6">
                 {
                     !success ? (
                         <div className="w-full flex flex-col justify-start items-start gap-8">
-                            <div className="w-full flex justify-center items-center lg:gap-16 gap-6">
+                            <div className="w-full flex justify-center items-center xl:gap-16 gap-6">
                                 <div />
                                 <div className="flex flex-col justify-center items-center gap-1 cursor-pointer"
                                     onClick={() => setTabs(0)}
                                 >
-                                    <p className={`font-400 lg:text-24 text-16 lg:leading-32 leading-22 text-primary-100 ${tabs === 1 && "opacity-50"}`}>Find a Mentor</p>
+                                    <p className={`font-400 xl:text-24 text-16 xl:leading-32 leading-22 text-primary-100 ${tabs === 1 && "opacity-50"}`}>Find a Mentor</p>
                                     {
                                         tabs === 0 && (
                                             <div className="w-116 h-1 rounded-sm bg-primary-450" />
@@ -135,7 +135,7 @@ const SignUp = ({ ref }) => {
                                     <div className="w-1 h-9 bg-primary-850" />
                                 </div>
                                 <div className="flex flex-col justify-center items-center gap-1 cursor-pointer" onClick={() => setTabs(1)}>
-                                    <p className={`lg:font-400 font-500 lg:text-24 text-16 lg:leading-32 leading-22 text-primary-100 ${tabs === 0 && "opacity-50"}`}>Become a Mentor</p>
+                                    <p className={`xl:font-400 font-500 xl:text-24 text-16 xl:leading-32 leading-22 text-primary-100 ${tabs === 0 && "opacity-50"}`}>Become a Mentor</p>
                                     {
                                         tabs === 1 && (
                                             <div className="w-116 h-1 rounded-sm bg-primary-450" />
@@ -252,10 +252,10 @@ const SignUp = ({ ref }) => {
                                     alt="success"
                                 />
                             </div>
-                            <p className='w-full lg:text-justify text-center font-bold text-20 leading-28 text-primary-100 opacity-50'>
+                            <p className='w-full xl:text-justify text-center font-bold text-20 leading-28 text-primary-100 opacity-50'>
                                 We have sent a confirmation email to <span className='font-extrabold'>{values.email}</span> Please press the confirmation button to confirm your registration.
                             </p>
-                            <div className="w-full flex flex-col justify-center items-center gap-2.5 lg:mt-7 mt-0">
+                            <div className="w-full flex flex-col justify-center items-center gap-2.5 xl:mt-7 mt-0">
                                 <p className="font-400 text-14 leading-22 text-primary-100 opacity-50 text-center">
                                     Connect with us
                                 </p>

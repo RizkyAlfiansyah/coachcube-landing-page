@@ -92,7 +92,7 @@ module.exports = {
         140: "140vh",
       },
       borderRadius: {
-        lg: "10px",
+        xl: "10px",
         "4xl": "36px",
       },
       gap: {

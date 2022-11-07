@@ -60,15 +60,15 @@ const SecondSection = () => {
 
     return (
         <>
-            <div className="lg:w-8/12 w-full flex flex-col justify-center items-center gap-4">
-                <p className="w-full text-center font-bold lg:text-48 text-24 lg:leading-61 leading-31 text-primary-100">
+            <div className="xl:w-8/12 w-full flex flex-col justify-center items-center gap-4">
+                <p className="w-full text-center font-bold xl:text-48 text-24 xl:leading-61 leading-31 text-primary-100">
                     Our Mentors
                 </p>
-                <p className="w-full text-center font-400 lg:text-20 text-16 leading-32 text-primary-600">
+                <p className="w-full text-center font-400 xl:text-20 text-16 leading-32 text-primary-600">
                     Our mentors are industry leading experts who are passionate about helping to educate and inpire the next generation.
                 </p>
             </div>
-            <div className="hidden w-full lg:grid lg:grid-cols-5 items-center justify-center lg:gap-20 gap-10">
+            <div className="hidden w-full xl:grid xl:grid-cols-5 items-center justify-center xl:gap-20 gap-10">
                 {
                     Array(icons.length).fill().map((_, index) => (
                         <div className="w-40 h-14" key={index}>
@@ -77,7 +77,7 @@ const SecondSection = () => {
                     ))
                 }
             </div>
-            <div className="lg:hidden w-full flex flex-col items-center justify-center gap-10">
+            <div className="xl:hidden w-full flex flex-col items-center justify-center gap-10">
                 {
                     Array(5).fill().map((_, index) => (
                         <div className="w-40 h-14" key={index}>

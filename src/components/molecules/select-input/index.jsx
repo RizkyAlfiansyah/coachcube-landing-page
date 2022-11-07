@@ -12,6 +12,7 @@ const SelectInput = ({
     category = false,
     required = false,
     filled = false,
+    errorMessage = '',
 }) => {
 
     const [searchFilter, setSearchFilter] = useState('')
@@ -21,7 +22,7 @@ const SelectInput = ({
     });
 
     return (
-        <div className={`${className} relative`}>
+        <div className={`${className} relative flex flex-col gap-1`}>
             <div
                 className={`${required ? "border-red-500" : "border-primary-550"} w-full flex gap-2.5 justify-between cursor-pointer hover:shadow-lg items-center py-5 px-4 bg-primary-550 border-1 focus:ring-0 focus:outline-none rounded-lg z-10`}
                 onClick={onClick}
@@ -33,6 +34,13 @@ const SelectInput = ({
                     <Image src={ArrowDownSVG} alt="arrow down" />
                 </div>
             </div>
+            {
+                errorMessage && (
+                    <p className='font-400 text-14 leading-28 text-red-500'>
+                        {errorMessage}
+                    </p>
+                )
+            }
             {
                 collapse && (
                     <div className='w-60 min-h-[40px] max-h-[240px] p-4 flex flex-col gap-4 justify-start items-start bg-white rounded-lg shadow-md absolute top-20 overflow-auto z-20'>
