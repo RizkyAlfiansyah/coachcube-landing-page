@@ -94,13 +94,15 @@ const SecondSection = () => {
                 }
             </div>
             {
-                icons.length > 10 && (
+                icons.length > 10 ? (
                     <div className="flex gap-2">
                         <div className="w-7 h-2 bg-primary-700 rounded-md" />
                         <div className="w-2 h-2 bg-primary-700 bg-opacity-40 rounded-full" />
                         <div className="w-2 h-2 bg-primary-700 bg-opacity-40 rounded-full" />
                         <div className="w-2 h-2 bg-primary-700 bg-opacity-40 rounded-full" />
                     </div>
+                ) : (
+                    <div />
                 )
             }
         </>
