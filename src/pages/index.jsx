@@ -17,13 +17,13 @@ const Home = () => {
         <Hero onClick={(value) => _handleRef(value)} />
       </section>
       {/* second Section */}
-      <section className="w-full flex flex-col lg:h-[80vh] min-h-screen items-center justify-between xl:py-20 lg:px-8 py-8 px-6 md:px-12 md:py-8 bg-primary-50">
+      <section className="w-full flex flex-col lg:h-[80] md:h-[40vh] min-h-screen items-center justify-between xl:py-20 lg:px-8 py-8 px-2 md:px-12 md:py-8 bg-primary-50">
         <SecondSection />
       </section>
       <section className="w-full flex lg:flex-row flex-col items-center justify-between" ref={ref}>
         <SignUpSection datas={[tabs, setTabs]} />
       </section>
-      <section className="w-full lg:h-screen h-2/4 flex flex-col justify-start items-start z-40">
+      <section className="w-full lg:h-[90%] h-2/4 flex flex-col justify-start items-start z-40">
         <CountdownSection />
       </section>
       <footer className="w-full flex flex-col justify-start xl:items-start items-center">

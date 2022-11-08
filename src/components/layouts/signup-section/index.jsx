@@ -24,7 +24,6 @@ const SignUp = ({ ref, datas }) => {
         phoneCode: '+44',
         categories: 'Industry',
     });
-    const isMentor = localStorage.getItem('isMentor');
     const [tabs, setTabs] = datas;
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState([])
@@ -64,13 +63,9 @@ const SignUp = ({ ref, datas }) => {
         }
     };
 
-    const handleSelect = (e) => {
-        setTabs(e);
-    };
-
     useEffect(() => {
         fetchCategory();
-    }, [tabs]);
+    }, []);
 
     const categories = category.map((item) => {
         return {
@@ -117,7 +112,7 @@ const SignUp = ({ ref, datas }) => {
     }
 
     return (
-        <div className='w-full flex justify-start items-start bg-mix-horizontal lg:min-h-[120vh] xl:p-20 lg:pb-0 xl:pb-0 lg:p-10 lg:pr-20 xl:gap-16 lg:gap-14'>
+        <div className='w-full flex justify-start items-start bg-mix-horizontal lg:min-h-[110vh] xl:p-20 lg:pb-0 xl:pb-0 lg:p-10 lg:pr-20 xl:gap-16 lg:gap-14'>
             <div className="relative hidden lg:w-6/12 w-full h-full lg:flex flex-col lg:gap-8 gap-6 justify-start items-start">
                 <p className="xl:w-[476px] lg:w-96 lg:text-start font-bold lg:text-28 text-24 lg:leading-36 leading-31 text-white text-center">
                     Raise money for causes you believe in by becoming a mentor
@@ -134,7 +129,7 @@ const SignUp = ({ ref, datas }) => {
                 </div>
                 <div className='xl:hidden lg:flex h-44' />
             </div>
-            <div className="lg:w-6/12 w-full lg:h-full h-3/4 flex flex-col gap-6 lg:gap-0 justify-start items-center lg:bg-white lg:bg-none bg-mix lg:p-0 lg:py-8 py-8 pt-12 md:px-20 lg:px-0 px-6 overflow-auto" ref={ref}>
+            <div className="lg:w-6/12 w-full lg:h-full h-3/4 flex flex-col gap-12 lg:gap-0 justify-start items-center lg:bg-white lg:bg-none bg-mix lg:p-0 lg:py-8 py-6 pt-12 md:px-20 lg:px-0 px-6 overflow-auto" ref={ref}>
                 <div className="lg:hidden w-full flex flex-col gap-4 justify-start">
                     <p className="lg:text-start font-bold lg:text-28 text-24 lg:leading-36 leading-31 text-white text-center lg:px-0 px-4">
                         Raise money for causes you believe in by becoming a mentor
@@ -159,7 +154,6 @@ const SignUp = ({ ref, datas }) => {
                                         setTabs(0)
                                         setError([])
                                         emptyValues()
-                                        localStorage.removeItem('isMentor')
                                         setString({
                                             ...string,
                                             categories: 'Industry'
@@ -181,7 +175,6 @@ const SignUp = ({ ref, datas }) => {
                                         setTabs(1)
                                         setError([])
                                         emptyValues()
-                                        localStorage.removeItem('isMentor')
                                         setString({
                                             ...string,
                                             categories: 'Industry'
@@ -220,7 +213,7 @@ const SignUp = ({ ref, datas }) => {
                                         className="w-1/2"
                                         onChange={(e) => setValues({ ...values, first_name: e.target.value })}
                                         required
-                                        errorMessage={error?.first_name || error?.last_name}
+                                        errorMessage={(error?.first_name || error?.last_name) ? "First Name and Last Name cannot be empty" : null}
                                     />
                                     <Input
                                         type="text"
@@ -229,18 +222,20 @@ const SignUp = ({ ref, datas }) => {
                                         className="w-1/2"
                                         onChange={(e) => setValues({ ...values, last_name: e.target.value })}
                                         required
-                                        errorMessage={error?.first_name && ""}
+                                        isLastname={error?.first_name || error?.last_name}
+                                    // errorMessage={(error?.first_name || error?.last_name) ? "First Name and Last Name cannot be empty" : null}
                                     />
                                 </div>
                                 {
-                                    error?.first_name && (
+                                    (error?.first_name || error?.last_name) ? (
                                         <p className='lg:hidden font-400 text-14 leading-28 text-red-500'>
-                                            {error?.first_name || error?.last_name}
+                                            First Name and Last Name cannot be empty
                                         </p>
-                                    )
+                                    ) : null
                                 }
                                 <div className="w-full flex justify-between items-start lg:gap-8 gap-4">
                                     <SelectInput
+                                        withFilter
                                         text={string.phoneCode}
                                         data={dataPhonecode}
                                         className="md:w-3/12 w-4/12"
@@ -269,7 +264,7 @@ const SignUp = ({ ref, datas }) => {
                                         value={values.phone}
                                         className="w-9/12"
                                         onChange={(e) => setValues({ ...values, phone: e.target.value })}
-                                        required={tabs === 1}
+                                        required
                                         errorMessage={error?.phone == "The phone field is required." ? "Phone number cannot be empty." : error?.phone}
                                     />
                                 </div>
@@ -298,7 +293,7 @@ const SignUp = ({ ref, datas }) => {
                                             categories: value.labels
                                         })
                                     }}
-                                    required={tabs === 1}
+                                    required
                                     filled={values.industry_id}
                                     errorMessage={error?.industry_id && "Please choose one industry."}
                                 />

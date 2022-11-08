@@ -21,7 +21,7 @@ const CountDown = () => {
 
     return (
         <>
-            <div className="w-full lg:h-40 flex flex-col items-start justify-start xl:px-24 xl:py-[72px] gap-4 px-6 py-12">
+            <div className="w-full flex flex-col items-start justify-start xl:px-24 xl:py-[72px] gap-4 px-6 py-12">
                 <div className="w-full flex lg:flex-row flex-col justify-between items-start border-b-1 border-primary-250 pb-6 xl:gap-0 gap-8">
                     <div className="md:w-full lg:w-auto flex md:flex-row flex-col lg:justify-start md:justify-between lg:items-start justify-center items-center gap-2.5 md:gap-6 lg:gap-2.5">
                         <div className='md:w-1/12 lg:w-auto'>

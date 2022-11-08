@@ -84,15 +84,15 @@ const Hero = ({
                     Industry Experts
                 </h1>
                 <div className="flex lg:flex-row flex-col items-center justify-center mt-11 gap-4">
-                    <button className="w-72 flex items-center justify-center text-center py-4 px-6 font-bold text-white text-20 leading-25 bg-primary-100 rounded-lg hover:shadow-xl"
-                        onClick={() => onClick(1)}
-                    >
-                        Become a Mentor
-                    </button>
                     <button className="w-72 flex items-center justify-center text-center py-4 px-6 font-bold text-white text-20 leading-25 bg-primary-710 rounded-lg hover:shadow-xl"
                         onClick={() => onClick(0)}
                     >
                         Find a Mentor
+                    </button>
+                    <button className="w-72 flex items-center justify-center text-center py-4 px-6 font-bold text-white text-20 leading-25 bg-primary-100 rounded-lg hover:shadow-xl"
+                        onClick={() => onClick(1)}
+                    >
+                        Become a Mentor
                     </button>
                 </div>
             </div>

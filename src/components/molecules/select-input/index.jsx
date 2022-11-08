@@ -12,6 +12,7 @@ const SelectInput = ({
     category = false,
     required = false,
     filled = false,
+    withFilter = false,
     errorMessage = '',
     dropdownWidth = 'w-full',
 }) => {
@@ -19,7 +20,7 @@ const SelectInput = ({
     const [searchFilter, setSearchFilter] = useState('')
 
     const dataSearch = data.filter((item) => {
-        return item.labels.toLowerCase().includes(searchFilter.toLowerCase())
+        return Object.values(item).join('').toLowerCase().includes(searchFilter.toLowerCase())
     });
 
     return (
@@ -45,12 +46,16 @@ const SelectInput = ({
             {
                 collapse && (
                     <div className={`${dropdownWidth} min-h-[48px] max-h-[238px] p-2 pt-0 flex flex-col gap-2 justify-start items-start bg-white rounded-lg shadow-md absolute top-20 overflow-auto z-20`}>
-                        <div className='w-full sticky top-0 py-4 pt-6 bg-white'>
-                            <input type="text" placeholder='Search Item' className='w-full rounded-lg bg-primary-550 p-2 focus:ring-0 focus:outline-none'
-                                value={searchFilter}
-                                onChange={(e) => setSearchFilter(e.target.value)}
-                            />
-                        </div>
+                        {
+                            withFilter && (
+                                <div className='w-full sticky top-0 py-4 pt-6 bg-white'>
+                                    <input type="text" placeholder='Search Item' className='w-full rounded-lg bg-primary-550 p-2 focus:ring-0 focus:outline-none'
+                                        value={searchFilter}
+                                        onChange={(e) => setSearchFilter(e.target.value)}
+                                    />
+                                </div>
+                            )
+                        }
                         {
                             data.length > 0 &&
                             dataSearch.map((item, index) => {

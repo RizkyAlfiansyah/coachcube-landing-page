@@ -15,6 +15,33 @@ import Image from "next/image";
 const SecondSection = () => {
 
     const icons = [
+        [
+            GoogleSVG,
+            MetaSVG,
+            AmazonSVG,
+            MicrosoftSVG,
+            TeslaSVG,
+            JPMorganSVG,
+            WhiteCaseSVG,
+            GoldManSVG,
+            HarvardSVG,
+            StanfordSVG,
+        ],
+        [
+            AmazonSVG,
+            MicrosoftSVG,
+            TeslaSVG,
+            JPMorganSVG,
+            WhiteCaseSVG,
+            GoldManSVG,
+            HarvardSVG,
+            StanfordSVG,
+            MorganSVG,
+            MorganSVG,
+        ],
+    ];
+
+    const desktopIcon = [
         GoogleSVG,
         MetaSVG,
         AmazonSVG,
@@ -25,22 +52,57 @@ const SecondSection = () => {
         GoldManSVG,
         HarvardSVG,
         StanfordSVG,
-        MorganSVG,
-        MorganSVG,
+        AmazonSVG,
+        MicrosoftSVG,
+        TeslaSVG,
+        JPMorganSVG,
+        WhiteCaseSVG,
     ];
 
-    const icons2 = [
-
-    ]
+    const tabletIcons = [
+        [
+            GoogleSVG,
+            MetaSVG,
+            AmazonSVG,
+            MicrosoftSVG,
+            TeslaSVG,
+            JPMorganSVG,
+        ],
+        [
+            WhiteCaseSVG,
+            GoldManSVG,
+            HarvardSVG,
+            StanfordSVG,
+            AmazonSVG,
+            MicrosoftSVG,
+        ],
+        [
+            TeslaSVG,
+            JPMorganSVG,
+            AmazonSVG,
+            MicrosoftSVG,
+            HarvardSVG,
+            StanfordSVG,
+        ]
+    ];
 
     const [index, setIndex] = useState(0);
+    const [tabIndex, setTabIndex] = useState(0);
     const timeoutRef = useRef(null);
+    const tabletTimeoutRef = useRef(null);
     const delay = 2500;
-    const [items, setItems] = useState([]);
+    const tabDelay = 2500;
+    const [items, setItems] = useState(0);
+    const [tabItems, setTabItems] = useState(0);
 
     const resetTimeout = () => {
         if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
+        }
+    };
+    const resetTimeoutTable = () => {
+        if (tabletTimeoutRef.current) {
+            clearTimeout(tabletTimeoutRef.current);
         }
     };
 
@@ -56,9 +118,25 @@ const SecondSection = () => {
 
         return () => {
             resetTimeout();
-            setItems(icons[index]);
+            setItems(index);
         };
     }, [index]);
+
+    useEffect(() => {
+        resetTimeoutTable();
+        tabletTimeoutRef.current = setTimeout(
+            () =>
+                setTabIndex((prevIndex) =>
+                    prevIndex === tabletIcons.length - 1 ? 0 : prevIndex + 1
+                ),
+            tabDelay
+        );
+
+        return () => {
+            resetTimeoutTable();
+            setTabItems(tabIndex);
+        };
+    }, [tabIndex]);
 
 
     return (
@@ -67,31 +145,31 @@ const SecondSection = () => {
                 <p className="w-full text-center font-bold xl:text-48 text-24 xl:leading-61 leading-31 text-primary-100">
                     Our Mentors
                 </p>
-                <p className="w-full text-center font-400 lg:text-20 text-16 leading-32 text-primary-600 lg:px-44 md:px-14 xl:px-28">
+                <p className="w-full text-center font-400 lg:text-20 text-16 leading-32 text-primary-600 lg:px-44 md:px-14 xl:px-28 px-4">
                     Our mentors are industry leading experts who are passionate about helping to educate and inpire the next generation.
                 </p>
             </div>
             <div className="hidden w-full md:grid lg:grid-cols-5 md:grid-cols-3 items-center justify-center xl:gap-20 lg:gap-10 md:gap-20 gap-10">
                 {
-                    Array(icons.length).fill().map((_, index) => (
+                    Array(desktopIcon.length).fill().map((_, index) => (
                         <div className="hidden lg:flex w-40 h-14" key={index}>
-                            <Image src={icons[index]} alt={index} />
+                            <Image src={desktopIcon[index]} alt={index} />
                         </div>
                     ))
                 }
                 {
-                    Array(6).fill().map((_, index) => (
+                    Array(tabletIcons[tabIndex].length).fill().map((_, index) => (
                         <div className="lg:hidden w-40 h-14" key={index}>
-                            <Image src={icons[index]} alt={index} />
+                            <Image src={tabletIcons[tabItems][index]} alt={index} />
                         </div>
                     ))
                 }
             </div>
             <div className="md:hidden w-full flex flex-wrap items-center justify-center gap-5 my-8">
                 {
-                    Array(icons.length).fill().map((_, index) => (
+                    Array(icons[index].length).fill().map((_, index) => (
                         <div className="w-40 h-14" key={index}>
-                            <Image src={icons[index]} alt={index} />
+                            <Image src={icons[items][index] ? icons[items][index] : GoogleSVG} alt={index} />
                         </div>
                     ))
                 }
@@ -108,7 +186,35 @@ const SecondSection = () => {
                     <div />
                 )
             } */}
-            <div />
+            <div className='md:hidden w-full flex justify-center items-center gap-1'>
+                {
+                    icons?.map((item, idx) => (
+                        <div className='flex gap-2' key={idx}>
+                            <div className={`${index === idx ? 'w-7 h-2 bg-primary-700 rounded-md' : 'w-2 h-2 bg-primary-700 bg-opacity-40 rounded-full cursor-pointer'}`} onClick={
+                                () => {
+                                    setIndex(idx)
+                                    setItems(idx)
+                                }
+                            } />
+                        </div>
+                    ))
+                }
+            </div>
+            <div className='hidden w-full md:flex lg:hidden justify-center items-center gap-1'>
+                {
+                    tabletIcons?.map((item, idx) => (
+                        <div className='flex gap-2' key={idx}>
+                            <div className={`${tabIndex === idx ? 'w-7 h-2 bg-primary-700 rounded-md' : 'w-2 h-2 bg-primary-700 bg-opacity-40 rounded-full cursor-pointer'}`} onClick={
+                                () => {
+                                    setTabIndex(idx)
+                                    setTabItems(idx)
+                                }
+                            } />
+                        </div>
+                    ))
+                }
+            </div>
+            <div className='hidden lg:flex' />
         </>
     )
 }
