@@ -24,10 +24,10 @@ const CountDown = () => {
             <div className="w-full lg:h-40 flex flex-col items-start justify-start xl:px-24 xl:py-[72px] gap-4 px-6 py-12">
                 <div className="w-full flex lg:flex-row flex-col justify-between items-start border-b-1 border-primary-250 pb-6 xl:gap-0 gap-8">
                     <div className="md:w-full lg:w-auto flex md:flex-row flex-col lg:justify-start md:justify-between lg:items-start justify-center items-center gap-2.5 md:gap-6 lg:gap-2.5">
-                        <div>
+                        <div className='md:w-1/12 lg:w-auto'>
                             <Image src={LogoSVG} alt="logo" />
                         </div>
-                        <p className="xl:w-636 md:w-[606px] font-400 text-16 leading-28 text-primary-600 md:text-start text-center">
+                        <p className="lg:w-636 md:w-full font-400 text-16 leading-28 text-primary-600 md:text-start text-center">
                             Coachcube is an artificial intelligence education technology platform that connects student and those in the early stages of their career with indsutry professional for the purposes of mentoring via online video tele conference.
                         </p>
                     </div>
@@ -50,11 +50,11 @@ const CountDown = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full flex flex-col xl:justify-start xl:items-start justify-center items-center gap-2.5">
+                <div className="w-full flex flex-col md:justify-start md:items-start justify-center items-center gap-2.5">
                     <p className="font-400 text-14 leading-22 text-primary-100 opacity-50">
                         Connect with us
                     </p>
-                    <div className="flex xl:justify-start xl:items-start gap-4 justify-center items-center">
+                    <div className="flex md:justify-start md:items-start gap-4 justify-center items-center">
                         {
                             Array(socials.length).fill(0).map((_, index) => (
                                 <div key={index} className="cursor-pointer">

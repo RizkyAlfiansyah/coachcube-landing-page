@@ -13,18 +13,18 @@ const CountDown = () => {
 
     return (
         <>
-            <div className="w-full lg:h-screen h-full bg-countdown bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center gap-8 xl:px-64 lg:px-20 px-6 sm:px-48">
+            <div className="w-full lg:h-screen h-full bg-countdown bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center gap-8 xl:px-64 lg:px-20 px-6 sm:px-36">
                 <p className="font-bold lg:text-48 text-24 lg:leading-61 leading-31 text-white text-center">
                     A home for high achievers
                 </p>
-                <div className="w-full flex flex-col justify-center items-center lg:gap-9 gap-4 py-3 px-4 lg:py-45 lg:px-86 lg:rounded-4xl rounded-xl bg-primary-860 bg-opacity-[0.35]">
+                <div className="flex flex-col justify-center items-center lg:gap-9 gap-4 py-3 px-4 lg:py-45 lg:px-86 md:px-14 lg:rounded-4xl rounded-xl bg-primary-860 bg-opacity-[0.35]">
                     <p className="font-bold lg:text-32 text-xs lg:leading-41 leading-[14px] text-white">
                         Launching In
                     </p>
-                    <div className='w-full flex justify-center items-center lg:gap-6 gap-1'>
+                    <div className='w-full flex justify-center items-center lg:gap-6 md:gap-4 gap-1'>
                         {
                             Array(4).fill(0).map((_, index) => (
-                                <div className={`w-full lg:w-auto flex ${index !== 3 ? "items-center justify-center" : "items-center justify-around"} lg:gap-6 gap-3`} key={index}>
+                                <div className={`md:w-full lg:w-auto flex ${index !== 3 ? "items-center justify-center" : "items-center justify-around"} lg:gap-6 gap-3`} key={index}>
                                     <div className="lg:w-160 flex flex-col justify-center items-center gap-2.5">
                                         <div className="flex justify-start items-start gap-2">
                                             <div className="lg:p-2 p-1 text-primary-100 font-400 lg:text-9xl lg:leading-128 text-40 leading-41 bg-white rounded-lg font-sharetech text-center">
