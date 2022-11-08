@@ -14,7 +14,7 @@ import { SelectInput } from 'components/molecules';
 import { phoneCode } from 'helpers/phone-code';
 import { axiosApiInstance } from 'helpers/axios';
 
-const SignUp = ({ ref }) => {
+const SignUp = ({ ref, datas }) => {
 
     const [collapsed, setCollapsed] = useState(false);
     const [collapseCategory, setCollapseCategory] = useState(false);
@@ -24,7 +24,8 @@ const SignUp = ({ ref }) => {
         phoneCode: '+44',
         categories: 'Industry',
     });
-    const [tabs, setTabs] = useState(0);
+    const isMentor = localStorage.getItem('isMentor');
+    const [tabs, setTabs] = datas;
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState([])
 
@@ -63,9 +64,13 @@ const SignUp = ({ ref }) => {
         }
     };
 
+    const handleSelect = (e) => {
+        setTabs(e);
+    };
+
     useEffect(() => {
         fetchCategory();
-    }, []);
+    }, [tabs]);
 
     const categories = category.map((item) => {
         return {
@@ -78,7 +83,6 @@ const SignUp = ({ ref }) => {
         setError([]);
         const payload = values;
         payload.is_mentor = tabs === 1 ? true : false;
-
         setLoading(true);
 
         try {
@@ -108,66 +112,90 @@ const SignUp = ({ ref }) => {
             phone: '',
             message: '',
         });
+        setCollapseCategory(false);
+        setCollapsed(false);
     }
 
     return (
-        <>
-            <div className="relative lg:w-5/12 w-full xl:h-full lg:h-full h-96 flex flex-col lg:gap-8 gap-6 justify-start items-start bg-primary-710 xl:px-20 px-5 xl:py-16 py-12" ref={ref}>
-                <p className="lg:text-start font-bold lg:text-28 text-24 lg:leading-36 leading-31 text-white text-center lg:px-0 px-4">
+        <div className='w-full flex justify-start items-start bg-mix-horizontal lg:min-h-[120vh] xl:p-20 lg:pb-0 xl:pb-0 lg:p-10 lg:pr-20 xl:gap-16 lg:gap-14'>
+            <div className="relative hidden lg:w-6/12 w-full h-full lg:flex flex-col lg:gap-8 gap-6 justify-start items-start">
+                <p className="xl:w-[476px] lg:w-96 lg:text-start font-bold lg:text-28 text-24 lg:leading-36 leading-31 text-white text-center">
                     Raise money for causes you believe in by becoming a mentor
                 </p>
                 <div className="w-full flex lg:justify-start justify-center lg:items-start items-center">
                     <div className="lg:w-28 w-56 h-1 rounded-sm bg-primary-300" />
                 </div>
-                <div className="xl:w-720 lg:w-[450px] w-full flex flex-col lg:justify-start justify-center lg:items-start items-center mt-9">
-                    <Image src={tabs === 0 ? SignUpBG : SignUpMaleBG} alt="sign up" className='z-20' />
+                <div className="w-full relative flex flex-col lg:justify-start justify-center lg:items-start items-center mt-9">
+                    <Image src={tabs === 0 ? SignUpBG : SignUpMaleBG} alt="sign up" width={604} />
+                    <div className='absolute bottom-4 left-4 flex flex-col justify-start items-start gap-2 drop-shadow-3xl'>
+                        <p className='text-white font-bold text-32 leading-25'>{tabs === 0 ? "Sarah Liu" : "James Austin"}</p>
+                        <p className='text-white font-light text-24 leading-25'>{tabs === 0 ? "Student" : "Architect"}</p>
+                    </div>
                 </div>
+                <div className='xl:hidden lg:flex h-44' />
             </div>
-            <div className="lg:w-7/12 w-full lg:h-full h-3/4 flex flex-col justify-start items-center bg-white xl:p-24 xl:pb-4 lg:pb-4 lg:py-12 xl:pl-36 lg:pr-6 lg:px-14 py-8 pt-56 md:pt-96 sm:pt-[400px] md:px-20 px-6 overflow-auto">
+            <div className="lg:w-6/12 w-full lg:h-full h-3/4 flex flex-col gap-6 lg:gap-0 justify-start items-center lg:bg-white lg:bg-none bg-mix lg:p-0 lg:py-8 py-8 pt-12 md:px-20 lg:px-0 px-6 overflow-auto" ref={ref}>
+                <div className="lg:hidden w-full flex flex-col gap-4 justify-start">
+                    <p className="lg:text-start font-bold lg:text-28 text-24 lg:leading-36 leading-31 text-white text-center lg:px-0 px-4">
+                        Raise money for causes you believe in by becoming a mentor
+                    </p>
+                    <div className="w-full flex lg:justify-start justify-center lg:items-start items-center">
+                        <div className="lg:w-28 w-56 h-1 rounded-sm bg-primary-300" />
+                    </div>
+                    <div className="xl:w-720 lg:w-[450px] relative w-full flex flex-col lg:justify-start justify-center lg:items-start items-center mt-4">
+                        <Image src={tabs === 0 ? SignUpBG : SignUpMaleBG} alt="sign up" />
+                        <div className='absolute bottom-4 left-4 flex flex-col text-16 leading-14 gap-2 justify-start items-start drop-shadow-3xl'>
+                            <p className='text-white font-bold'>{tabs === 0 ? "Sarah Liu" : "James Austin"}</p>
+                            <p className='text-white font-light'>{tabs === 0 ? "Student" : "Architect"}</p>
+                        </div>
+                    </div>
+                </div>
                 {
                     !success ? (
-                        <div className="w-full h-full flex flex-col justify-start items-start gap-8 overflow-auto">
-                            <div className="w-full flex justify-evenly items-center xl:gap-16 md:gap-4 gap-6 md:px-10 lg:px-0">
-                                <div className="w-full flex flex-col justify-center items-center gap-1 cursor-pointer"
+                        <div className="w-full h-full flex flex-col justify-start items-start gap-8">
+                            <div className="w-full flex justify-between items-center md:px-10 lg:px-0 gap-2">
+                                <div className="w-full flex flex-col justify-center items-center gap-4 cursor-pointer"
                                     onClick={() => {
                                         setTabs(0)
                                         setError([])
                                         emptyValues()
+                                        localStorage.removeItem('isMentor')
                                         setString({
                                             ...string,
                                             categories: 'Industry'
                                         })
                                     }}
                                 >
-                                    <p className={`font-400 lg:text-24 text-16 lg:leading-32 leading-22 text-primary-100 ${tabs === 1 && "opacity-50"}`}>Find a Mentor</p>
+                                    <p className={`font-400 xl:text-24 lg:text-20 text-center text-16 lg:leading-32 leading-22 text-primary-100 ${tabs === 1 && "opacity-50"}`}>Find a Mentor</p>
                                     {
-                                        tabs === 0 && (
+                                        tabs === 0 ? (
                                             <div className="w-116 h-1 rounded-sm bg-primary-450" />
-                                        )
+                                        ) : null
                                     }
                                 </div>
                                 <div>
                                     <div className="w-1 h-9 bg-primary-850" />
                                 </div>
-                                <div className="w-full flex flex-col justify-center items-center gap-1 cursor-pointer"
+                                <div className="w-full flex flex-col justify-center items-center gap-4 cursor-pointer"
                                     onClick={() => {
                                         setTabs(1)
                                         setError([])
                                         emptyValues()
+                                        localStorage.removeItem('isMentor')
                                         setString({
                                             ...string,
                                             categories: 'Industry'
                                         })
                                     }}>
-                                    <p className={`lg:font-400 font-500 lg:text-24 text-16 lg:leading-32 leading-22 text-primary-100 ${tabs === 0 && "opacity-50"}`}>Become a Mentor</p>
+                                    <p className={`w-full lg:font-400 font-500 text-center xl:text-24 lg:text-20 text-16 lg:leading-32 leading-22 text-primary-100 ${tabs === 0 && "opacity-50"}`}>Become a Mentor</p>
                                     {
-                                        tabs === 1 && (
+                                        tabs === 1 ? (
                                             <div className="w-116 h-1 rounded-sm bg-primary-450" />
-                                        )
+                                        ) : null
                                     }
                                 </div>
                             </div>
-                            <div className={`w-full flex flex-col ${error?.length === 0 ? "gap-8" : "gap-4"} items-start justify-start`}>
+                            <div className={`w-full flex flex-col gap-4 items-start justify-start`}>
                                 <Input
                                     type="email"
                                     placeholder="Email"
@@ -215,7 +243,7 @@ const SignUp = ({ ref }) => {
                                     <SelectInput
                                         text={string.phoneCode}
                                         data={dataPhonecode}
-                                        className="md:w-3/12 w-4/12 text-primary-950"
+                                        className="md:w-3/12 w-4/12"
                                         dropdownWidth='w-58'
                                         collapse={collapsed}
                                         onClick={() => {
@@ -308,15 +336,16 @@ const SignUp = ({ ref }) => {
                             </button>
                         </div>
                     ) : (
-                        <div className='w-full h-full flex flex-col justify-center items-center gap-7 pt-24 px-16'>
+                        <div className='w-full h-full flex flex-col justify-start items-center gap-7 lg:pt-28 pr-14'>
                             <div>
                                 <Image
                                     src={SuccessSVG}
                                     alt="success"
                                 />
                             </div>
-                            <p className='w-full lg:text-justify text-center font-bold text-20 leading-28 text-primary-100 opacity-50'>
-                                We have sent a confirmation email to <span className='font-extrabold'>{values.email}</span> Please press the confirmation button to confirm your registration.
+                            <p className='font-bold text-28 leading-36 text-center text-primary-100'>You are registered!</p>
+                            <p className='w-full lg:text-justify text-center font-normal text-20 leading-28 text-primary-100 opacity-50'>
+                                We have sent a confirmation email to <span className='font-bold'>{values.email || "coachcuba@example.com"}</span> Please press the confirmation button to confirm your registration.
                             </p>
                             <div className="w-full flex flex-col justify-center items-center gap-2.5 lg:mt-7 mt-0">
                                 <p className="font-400 text-14 leading-22 text-primary-100 opacity-50 text-center">
@@ -337,7 +366,7 @@ const SignUp = ({ ref }) => {
                     )
                 }
             </div>
-        </>
+        </div>
     )
 }
 

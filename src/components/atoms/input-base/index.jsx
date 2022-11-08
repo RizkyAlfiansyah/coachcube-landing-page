@@ -18,7 +18,7 @@ const Input = ({
                 name={name}
                 value={value}
                 placeholder={placeholder}
-                className={`${className} py-5 px-4 bg-primary-550 border-1 border-primary-550 focus:ring-0 focus:outline-none rounded-lg text-20 font-400 leading-25 resize-none`}
+                className={`${className} py-5 px-4 bg-primary-550 text-primary-100 border-1 border-primary-550 focus:ring-0 focus:outline-none rounded-lg text-20 font-400 leading-25 resize-none`}
                 onChange={onChange}
             />
         )
@@ -31,7 +31,7 @@ const Input = ({
                             type={type}
                             pattern={type === 'tel' || type === 'number' ? '[0-9]' : ''}
                             // placeholder={placeholder}
-                            className={`w-full py-5 px-4 bg-primary-550 border-1 ${errorMessage ? "border-red-500" : "border-primary-550"} focus:ring-0 focus:outline-none rounded-lg text-20 font-400 leading-25`}
+                            className={`w-full py-5 px-4 text-primary-100 bg-primary-550 border-1 ${errorMessage ? "border-red-500" : "border-primary-550"} focus:ring-0 focus:outline-none rounded-lg text-20 font-400 leading-25`}
                             value={value}
                             onChange={onChange}
                             required={required}

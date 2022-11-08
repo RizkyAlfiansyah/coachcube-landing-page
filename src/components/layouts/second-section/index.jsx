@@ -9,6 +9,7 @@ import WhiteCaseSVG from "assets/icons/icon-whitecase.svg";
 import GoldManSVG from "assets/icons/icon-goldman.svg";
 import HarvardSVG from "assets/icons/icon-harvard.svg";
 import StanfordSVG from "assets/icons/icon-stanford.svg";
+import MorganSVG from "assets/icons/icon-morgan.svg";
 import Image from "next/image";
 
 const SecondSection = () => {
@@ -24,6 +25,8 @@ const SecondSection = () => {
         GoldManSVG,
         HarvardSVG,
         StanfordSVG,
+        MorganSVG,
+        MorganSVG,
     ];
 
     const icons2 = [

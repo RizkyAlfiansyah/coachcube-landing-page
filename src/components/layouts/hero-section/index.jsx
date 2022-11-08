@@ -80,14 +80,19 @@ const Hero = ({
                 <h1 className="xl:text-48 md:text-32 text-24 xl:font-normal font-bold text-primary-500 text-center xl:leading-80 leading-32 bg-white bg-opacity-50 xl:px-6 py-5 px-4 rounded-lg">
                     1-on-1 Mentorship From
                 </h1>
-                <h1 className="xl:text-48 md:text-32 text-24 xl:font-normal font-bold text-primary-500 text-center xl:leading-80 leading-32 bg-white bg-opacity-50 xl:px-6 py-5 px-4 rounded-b-lg">
+                <h1 className="xl:text-48 md:text-32 text-24 xl:font-normal font-bold text-primary-500 text-center xl:leading-80 leading-32 bg-white bg-opacity-50 xl:px-6 pt-0 py-5 px-4 rounded-b-lg">
                     Industry Experts
                 </h1>
-                <div className="w-6/12 flex items-center justify-center mt-11">
+                <div className="flex lg:flex-row flex-col items-center justify-center mt-11 gap-4">
                     <button className="w-72 flex items-center justify-center text-center py-4 px-6 font-bold text-white text-20 leading-25 bg-primary-100 rounded-lg hover:shadow-xl"
-                        onClick={onClick}
+                        onClick={() => onClick(1)}
                     >
-                        Sign Up
+                        Become a Mentor
+                    </button>
+                    <button className="w-72 flex items-center justify-center text-center py-4 px-6 font-bold text-white text-20 leading-25 bg-primary-710 rounded-lg hover:shadow-xl"
+                        onClick={() => onClick(0)}
+                    >
+                        Find a Mentor
                     </button>
                 </div>
             </div>
@@ -125,7 +130,7 @@ const Hero = ({
                     {
                         icons?.map((item, idx) => (
                             <div className='flex gap-2' key={idx}>
-                                <div className={`${index === idx ? 'w-7 bg-opacity-40' : 'w-2'} h-2 bg-primary-580 rounded-md`} onClick={
+                                <div className={`${index === idx ? 'w-7 bg-white' : 'w-2 bg-white bg-opacity-40'} h-2 rounded-md`} onClick={
                                     () => {
                                         setIndex(idx)
                                         setItems(item)

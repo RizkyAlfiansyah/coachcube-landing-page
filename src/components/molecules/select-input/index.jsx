@@ -28,7 +28,7 @@ const SelectInput = ({
                 className={`${errorMessage ? "border-red-500" : "border-primary-550"} w-full flex gap-2.5 justify-between cursor-pointer hover:shadow-lg items-center py-5 px-4 bg-primary-550 border-1 focus:ring-0 focus:outline-none rounded-lg z-10`}
                 onClick={onClick}
             >
-                <p className={`${!filled && "text-primary-950"} text-20 font-400 leading-25`}>
+                <p className={`${!filled && "text-primary-950"} text-20 font-400 leading-25 text-primary-100`}>
                     {text} <span className={`${required && text === "Industry" ? "text-red-500" : "hidden"}`}>*</span>
                 </p>
                 <div className={`${collapse && "rotate-180"}`}>
@@ -44,7 +44,7 @@ const SelectInput = ({
             }
             {
                 collapse && (
-                    <div className={`${dropdownWidth} min-h-[40px] max-h-[240px] p-4 pt-0 flex flex-col gap-4 justify-start items-start bg-white rounded-lg shadow-md absolute top-20 overflow-auto z-20`}>
+                    <div className={`${dropdownWidth} min-h-[48px] max-h-[238px] p-2 pt-0 flex flex-col gap-2 justify-start items-start bg-white rounded-lg shadow-md absolute top-20 overflow-auto z-20`}>
                         <div className='w-full sticky top-0 py-4 pt-6 bg-white'>
                             <input type="text" placeholder='Search Item' className='w-full rounded-lg bg-primary-550 p-2 focus:ring-0 focus:outline-none'
                                 value={searchFilter}
@@ -55,7 +55,7 @@ const SelectInput = ({
                             data.length > 0 &&
                             dataSearch.map((item, index) => {
                                 return (
-                                    <div className='w-full hover:bg-primary-550 rounded-lg flex gap-4 cursor-pointer p-2' onClick={() => onClickItem(item)} key={index}>
+                                    <div className='w-full text-primary-100 hover:bg-primary-550 rounded-lg flex gap-4 cursor-pointer p-2' onClick={() => onClickItem(item)} key={index}>
                                         <p className='text-16 font-400 leading-25'>
                                             {item.labels}
                                         </p>

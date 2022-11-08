@@ -15,11 +15,11 @@ const CountDown = () => {
         <>
             <div className="w-full lg:h-screen h-full bg-countdown bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center gap-8 xl:px-64 lg:px-20 px-6 sm:px-48">
                 <p className="font-bold lg:text-48 text-24 lg:leading-61 leading-31 text-white text-center">
-                    A HOME FOR HIGH ACHIVERS
+                    A home for high achievers
                 </p>
                 <div className="w-full flex flex-col justify-center items-center lg:gap-9 gap-4 py-3 px-4 lg:py-45 lg:px-86 lg:rounded-4xl rounded-xl bg-primary-860 bg-opacity-[0.35]">
                     <p className="font-bold lg:text-32 text-xs lg:leading-41 leading-[14px] text-white">
-                        LAUNCHING IN
+                        Launching In
                     </p>
                     <div className='w-full flex justify-center items-center lg:gap-6 gap-1'>
                         {

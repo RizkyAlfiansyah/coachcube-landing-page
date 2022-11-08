@@ -71,6 +71,7 @@ module.exports = {
         128: "128px",
       },
       lineHeight: {
+        14: "14px",
         22: "22px",
         25: "25px",
         28: "28px",
@@ -105,10 +106,15 @@ module.exports = {
       borderWidth: {
         1: "1px",
       },
+      dropShadow: {
+        "3xl": "0px 4px 9px #07193D",
+      },
       backgroundImage: {
         hero: 'linear-gradient(180deg, #FFFFFF -2.34%, rgba(247, 247, 247, 0) 100%), url("/bg-hero.png")',
         countdown: 'url("/bg-countdown.png")',
         polygon: 'url("/polygon.png")',
+        mix: "linear-gradient(to bottom, #6A84AA 30%, #FFF 0%);",
+        "mix-horizontal": "linear-gradient(to right, #6A84AA 42%, #FFF 0%);",
       },
       fontFamily: {
         sharetech: ["Share Tech"],
