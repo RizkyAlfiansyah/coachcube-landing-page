@@ -142,13 +142,13 @@ const SignUp = ({ ref, datas }) => {
                     <div className="w-full flex lg:justify-start justify-center lg:items-start items-center">
                         <div className="lg:w-28 w-56 h-1 rounded-sm bg-primary-300" />
                     </div>
-                    <div className="xl:w-720 lg:w-[450px] relative w-full flex flex-col lg:justify-start justify-center lg:items-start items-center mt-4">
-                        <Image src={tabs === 0 ? SignUpBG : SignUpMaleBG} alt="sign up" />
-                        <div className='absolute bottom-4 left-4 flex flex-col text-16 leading-14 gap-2 justify-start items-start drop-shadow-3xl'>
+                    <figure className="relative text-center mt-4 mx-auto">
+                        <Image src={tabs === 0 ? SignUpBG : SignUpMaleBG} alt="sign up" className='m-auto' />
+                        <figcaption className='absolute bottom-4 left-4 flex flex-col text-16 leading-14 gap-2 justify-start items-start drop-shadow-3xl'>
                             <p className='text-white font-bold'>{tabs === 0 ? "Sarah Liu" : "James Austin"}</p>
                             <p className='text-white font-light'>{tabs === 0 ? "Student" : "Architect"}</p>
-                        </div>
-                    </div>
+                        </figcaption>
+                    </figure>
                 </div>
                 {
                     !success ? (
