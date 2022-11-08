@@ -165,7 +165,7 @@ const SecondSection = () => {
                     ))
                 }
             </div>
-            <div className="md:hidden w-full flex flex-wrap items-center justify-center gap-5 my-8">
+            <div className="md:hidden w-full grid grid-cols-2 justify-items-center gap-y-5 gap-x-0 my-8">
                 {
                     Array(icons[index].length).fill().map((_, index) => (
                         <div className="w-40 h-14" key={index}>
