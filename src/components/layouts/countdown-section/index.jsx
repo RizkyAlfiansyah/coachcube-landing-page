@@ -27,10 +27,10 @@ const CountDown = () => {
                                 <div className={`w-full lg:w-auto flex ${index !== 3 ? "items-center justify-center" : "items-center justify-around"} lg:gap-6 gap-3`} key={index}>
                                     <div className="lg:w-160 flex flex-col justify-center items-center gap-2.5">
                                         <div className="flex justify-start items-start gap-2">
-                                            <div className="lg:p-2 p-1 text-black font-400 lg:text-9xl lg:leading-128 text-40 leading-41 bg-white rounded-lg font-sharetech text-center">
+                                            <div className="lg:p-2 p-1 text-primary-100 font-400 lg:text-9xl lg:leading-128 text-40 leading-41 bg-white rounded-lg font-sharetech text-center">
                                                 {times[index] ? times[index][0] : "0"}
                                             </div>
-                                            <div className="lg:p-2 p-1 text-black font-400 lg:text-9xl lg:leading-128 text-40 leading-41 bg-white rounded-lg font-sharetech text-center">
+                                            <div className="lg:p-2 p-1 text-primary-100 font-400 lg:text-9xl lg:leading-128 text-40 leading-41 bg-white rounded-lg font-sharetech text-center">
                                                 {times[index] ? times[index][1] : "0"}
                                             </div>
                                         </div>

@@ -29,7 +29,7 @@ const SelectInput = ({
                 onClick={onClick}
             >
                 <p className={`${!filled && "text-primary-950"} text-20 font-400 leading-25 text-primary-100`}>
-                    {text} <span className={`${required && text === "Industry" ? "text-red-500" : "hidden"}`}>*</span>
+                    {text}<span className={`${required && text === "Industry" ? "text-red-500" : "hidden"}`}>*</span>
                 </p>
                 <div className={`${collapse && "rotate-180"}`}>
                     <Image src={ArrowDownSVG} alt="arrow down" />

@@ -71,7 +71,7 @@ const SecondSection = () => {
                     Our mentors are industry leading experts who are passionate about helping to educate and inpire the next generation.
                 </p>
             </div>
-            <div className="hidden w-full md:grid lg:grid-cols-5 md:grid-cols-3 items-center justify-center xl:gap-20 lg:gap-10 gap-10">
+            <div className="hidden w-full md:grid lg:grid-cols-5 md:grid-cols-3 items-center justify-center xl:gap-20 lg:gap-10 md:gap-20 gap-10">
                 {
                     Array(icons.length).fill().map((_, index) => (
                         <div className="hidden lg:flex w-40 h-14" key={index}>
@@ -96,7 +96,7 @@ const SecondSection = () => {
                     ))
                 }
             </div>
-            {
+            {/* {
                 icons.length > 10 ? (
                     <div className="flex gap-2">
                         <div className="w-7 h-2 bg-primary-700 rounded-md" />
@@ -107,7 +107,8 @@ const SecondSection = () => {
                 ) : (
                     <div />
                 )
-            }
+            } */}
+            <div />
         </>
     )
 }
