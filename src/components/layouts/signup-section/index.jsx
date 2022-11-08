@@ -166,7 +166,7 @@ const SignUp = ({ ref, datas }) => {
                                         })
                                     }}
                                 >
-                                    <p className={`font-400 xl:text-24 lg:text-20 text-center text-16 lg:leading-32 leading-22 text-primary-100 ${tabs === 1 && "opacity-50"}`}>Find a Mentor</p>
+                                    <p className={`font-400 xl:text-24 md:text-24 text-center text-16 md:leading-32 leading-22 text-primary-100 ${tabs === 1 && "opacity-50"}`}>Find a Mentor</p>
                                     {
                                         tabs === 0 ? (
                                             <div className="w-116 h-1 rounded-sm bg-primary-450" />
@@ -187,7 +187,7 @@ const SignUp = ({ ref, datas }) => {
                                             categories: 'Industry'
                                         })
                                     }}>
-                                    <p className={`w-full lg:font-400 font-500 text-center xl:text-24 lg:text-20 text-16 lg:leading-32 leading-22 text-primary-100 ${tabs === 0 && "opacity-50"}`}>Become a Mentor</p>
+                                    <p className={`w-full lg:font-400 font-500 text-center xl:text-24 md:text-20 text-16 md:leading-32 leading-22 text-primary-100 ${tabs === 0 && "opacity-50"}`}>Become a Mentor</p>
                                     {
                                         tabs === 1 ? (
                                             <div className="w-116 h-1 rounded-sm bg-primary-450" />
