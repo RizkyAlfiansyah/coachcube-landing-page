@@ -112,7 +112,7 @@ const SignUp = ({ ref, datas }) => {
     }
 
     return (
-        <div className='w-full flex justify-start items-start bg-mix-horizontal xl:p-20 lg:p-10 xl:pr-20 xl:gap-16 lg:gap-14'>
+        <div className='w-full flex justify-start items-start bg-mix-horizontal xl:p-20 lg:p-10 xl:pr-20 2xl:gap-0 xl:gap-16 lg:gap-14'>
             <div className="relative hidden lg:w-6/12 w-full h-full lg:flex flex-col lg:gap-8 gap-6 justify-start items-start">
                 <p className="xl:w-[475px] lg:w-96 lg:text-start font-bold lg:text-28 text-24 lg:leading-36 leading-31 text-white text-center">
                     {
