@@ -10,17 +10,16 @@ import GoldManSVG from "assets/icons/icon-goldman.svg";
 import HarvardSVG from "assets/icons/icon-harvard.svg";
 import StanfordSVG from "assets/icons/icon-stanford.svg";
 import MorganSVG from "assets/icons/icon-morgan.svg";
+import OxfordSVG from "assets/icons/icon-oxford.svg";
+import CambridgeSVG from "assets/icons/icon-cambridge.svg";
+import AllenSVG from "assets/icons/icon-allen_and_overy.svg";
+import LinkLaterSVG from "assets/icons/icon-linklaters.svg";
 import Image from "next/image";
 
 const SecondSection = () => {
 
     const icons = [
         [
-            GoogleSVG,
-            MetaSVG,
-            AmazonSVG,
-            MicrosoftSVG,
-            TeslaSVG,
             JPMorganSVG,
             WhiteCaseSVG,
             GoldManSVG,
@@ -28,16 +27,18 @@ const SecondSection = () => {
             StanfordSVG,
         ],
         [
+            MorganSVG,
+            OxfordSVG,
+            CambridgeSVG,
+            AllenSVG,
+            LinkLaterSVG,
+        ],
+        [
+            GoogleSVG,
+            MetaSVG,
             AmazonSVG,
             MicrosoftSVG,
             TeslaSVG,
-            JPMorganSVG,
-            WhiteCaseSVG,
-            GoldManSVG,
-            HarvardSVG,
-            StanfordSVG,
-            MorganSVG,
-            MorganSVG,
         ],
     ];
 
@@ -52,14 +53,27 @@ const SecondSection = () => {
         GoldManSVG,
         HarvardSVG,
         StanfordSVG,
-        AmazonSVG,
-        MicrosoftSVG,
-        TeslaSVG,
-        JPMorganSVG,
-        WhiteCaseSVG,
+        MorganSVG,
+        OxfordSVG,
+        CambridgeSVG,
+        AllenSVG,
+        LinkLaterSVG,
     ];
 
     const tabletIcons = [
+        [
+            WhiteCaseSVG,
+            GoldManSVG,
+            HarvardSVG,
+            StanfordSVG,
+            MorganSVG,
+            OxfordSVG,
+        ],
+        [
+            CambridgeSVG,
+            AllenSVG,
+            LinkLaterSVG,
+        ],
         [
             GoogleSVG,
             MetaSVG,
@@ -67,24 +81,11 @@ const SecondSection = () => {
             MicrosoftSVG,
             TeslaSVG,
             JPMorganSVG,
+
         ],
-        [
-            WhiteCaseSVG,
-            GoldManSVG,
-            HarvardSVG,
-            StanfordSVG,
-            AmazonSVG,
-            MicrosoftSVG,
-        ],
-        [
-            TeslaSVG,
-            JPMorganSVG,
-            AmazonSVG,
-            MicrosoftSVG,
-            HarvardSVG,
-            StanfordSVG,
-        ]
     ];
+
+
 
     const [index, setIndex] = useState(0);
     const [tabIndex, setTabIndex] = useState(0);
@@ -138,15 +139,14 @@ const SecondSection = () => {
         };
     }, [tabIndex]);
 
-
     return (
         <>
             <div className="xl:w-8/12 w-full flex flex-col justify-center items-center gap-4">
-                <p className="w-full text-center font-bold xl:text-48 text-24 xl:leading-61 leading-31 text-primary-100">
+                <p className="w-full text-center font-bold md:text-48 text-24 xl:leading-61 leading-31 text-primary-100">
                     Our Mentors
                 </p>
-                <p className="w-full text-center font-400 lg:text-20 text-16 leading-32 text-primary-600 lg:px-44 md:px-14 xl:px-28 px-4">
-                    Our mentors are industry leading experts who are passionate about helping to educate and inpire the next generation.
+                <p className="w-full text-center font-400 md:text-20 text-16 leading-32 text-primary-600 lg:px-44 md:px-8 xl:px-28 px-4">
+                    Our mentors are industry leading experts who are passionate about helping to educate and inpire the next generation
                 </p>
             </div>
             <div className="hidden w-full md:grid lg:grid-cols-5 md:grid-cols-3 items-center justify-center xl:gap-20 lg:gap-10 md:gap-20 gap-10">
@@ -158,16 +158,16 @@ const SecondSection = () => {
                     ))
                 }
                 {
-                    Array(tabletIcons[tabIndex].length).fill().map((_, index) => (
+                    Array(tabletIcons[tabItems].length).fill().map((_, index) => (
                         <div className="lg:hidden w-40 h-14" key={index}>
                             <Image src={tabletIcons[tabItems][index]} alt={index} />
                         </div>
                     ))
                 }
             </div>
-            <div className="md:hidden w-full grid grid-cols-2 justify-items-center gap-y-5 gap-x-0 my-8">
+            <div className="md:hidden w-full grid grid-cols-1 justify-items-center gap-y-5 gap-x-0 my-8">
                 {
-                    Array(icons[index].length).fill().map((_, index) => (
+                    Array(icons[items].length).fill().map((_, index) => (
                         <div className="w-40 h-14" key={index}>
                             <Image src={icons[items][index] ? icons[items][index] : GoogleSVG} alt={index} />
                         </div>

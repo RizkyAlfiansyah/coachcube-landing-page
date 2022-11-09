@@ -77,19 +77,19 @@ const Hero = ({
                 <Image src={LogoPNG} alt="Logo" width={230} height={40} className='lg:hidden' />
             </div>
             <div className="xl:w-6/12 w-full flex flex-col items-center justify-center">
-                <h1 className="xl:text-48 md:text-32 text-24 xl:font-normal font-bold text-primary-500 text-center xl:leading-80 leading-32 bg-white bg-opacity-50 xl:px-6 py-5 px-4 rounded-lg">
-                    1-on-1 Mentorship From
+                <h1 className="xl:text-48 md:text-32 text-20 xl:font-normal font-bold text-primary-500 text-center xl:leading-80 leading-32 bg-white bg-opacity-50 xl:px-6 py-2 px-4 rounded-lg">
+                    1-on-1 Mentorship from
                 </h1>
-                <h1 className="xl:text-48 md:text-32 text-24 xl:font-normal font-bold text-primary-500 text-center xl:leading-80 leading-32 bg-white bg-opacity-50 xl:px-6 pt-0 py-5 px-4 rounded-b-lg">
+                <h1 className="xl:text-48 md:text-32 text-20 xl:font-normal font-bold text-primary-500 text-center xl:leading-80 leading-32 bg-white bg-opacity-50 xl:px-6 py-2 px-4 rounded-b-lg">
                     Industry Experts
                 </h1>
-                <div className="flex lg:flex-row flex-col items-center justify-center mt-11 gap-4">
-                    <button className="w-72 flex items-center justify-center text-center py-4 px-6 font-bold text-white text-20 leading-25 bg-primary-710 rounded-lg hover:shadow-xl"
+                <div className="flex md:flex-row flex-col items-center justify-center mt-11 gap-4 text-center font-bold text-white lg:text-20 lg:leading-25 md:text-16 md:leading-20 text-14 leading-18">
+                    <button className="lg:w-262 md:w-226 w-170 flex items-center justify-center bg-primary-710 py-4 rounded-lg hover:shadow-xl"
                         onClick={() => onClick(0)}
                     >
                         Find a Mentor
                     </button>
-                    <button className="w-72 flex items-center justify-center text-center py-4 px-6 font-bold text-white text-20 leading-25 bg-primary-100 rounded-lg hover:shadow-xl"
+                    <button className="lg:w-262 md:w-226 w-170 flex items-center justify-center text-center bg-primary-100 py-4 rounded-lg hover:shadow-xl"
                         onClick={() => onClick(1)}
                     >
                         Become a Mentor
@@ -111,15 +111,15 @@ const Hero = ({
                     </div>
                 ))}
             </div>
-            <div className="w-full xl:h-auto h-64 flex flex-col xl:hidden md:hidden items-center xl:justify-center justify-between xl:gap-20 gap-5 bg-primary-200 bg-opacity-80 py-5 px-24">
+            <div className="w-full xl:h-auto h-48 flex flex-col xl:hidden md:hidden items-center xl:justify-center justify-between xl:gap-20 gap-5 bg-primary-200 bg-opacity-80 py-5 px-24">
                 <div
-                    className="w-48 flex flex-col gap-1 justify-between items-center"
+                    className="w-56 flex flex-col gap-1 justify-between items-center"
                 >
                     {
                         items !== [] && (
                             <>
-                                <Image src={items?.icon} alt={items?.desc} />
-                                <p className="font-400 text-16 leading-28 text-center text-white">
+                                <Image src={items?.icon} alt={items?.desc} width={54} height={32} />
+                                <p className="font-400 text-14 leading-22 text-center text-white">
                                     {items?.desc}
                                 </p>
                             </>
