@@ -112,7 +112,7 @@ const SignUp = ({ ref, datas }) => {
     }
 
     return (
-        <div className='w-full flex justify-start items-start bg-mix-horizontal lg:min-h-[115vh] xl:p-20 lg:pb-0 xl:pb-0 lg:p-10 lg:pr-20 xl:gap-16 lg:gap-14'>
+        <div className='w-full flex justify-start items-start bg-mix-horizontal xl:p-20 lg:p-10 xl:pr-20 xl:gap-16 lg:gap-14'>
             <div className="relative hidden lg:w-6/12 w-full h-full lg:flex flex-col lg:gap-8 gap-6 justify-start items-start">
                 <p className="xl:w-[475px] lg:w-96 lg:text-start font-bold lg:text-28 text-24 lg:leading-36 leading-31 text-white text-center">
                     {
@@ -129,9 +129,8 @@ const SignUp = ({ ref, datas }) => {
                         <p className='text-white font-light text-24 leading-25'>{tabs === 0 ? "Student" : "Architect"}</p>
                     </div>
                 </div>
-                <div className='xl:hidden lg:flex h-44' />
             </div>
-            <div className="lg:w-6/12 w-full lg:h-full h-3/4 flex flex-col gap-12 lg:gap-0 justify-start items-center lg:bg-white lg:bg-none bg-mix lg:p-0 lg:py-0 py-6 pt-12 md:px-20 lg:px-0 px-6 overflow-auto" ref={ref}>
+            <div className="lg:w-6/12 w-full lg:h-full h-3/4 flex flex-col gap-12 lg:gap-0 justify-start items-center lg:bg-white lg:bg-none bg-mix lg:p-0 lg:py-0 py-16 pt-12 md:px-20 lg:px-0 px-6 overflow-auto" ref={ref}>
                 <div className="lg:hidden w-full flex flex-col gap-4 justify-start">
                     <p className="lg:text-start font-bold lg:text-28 text-24 lg:leading-36 leading-31 text-white text-center lg:px-0 px-4">
                         {
@@ -268,17 +267,8 @@ const SignUp = ({ ref, datas }) => {
                                         value={values.phone}
                                         className="w-9/12"
                                         onChange={(e) => setValues({ ...values, phone: e.target.value })}
-                                        required
-                                        errorMessage={error?.phone == "The phone field is required." ? "Phone number cannot be empty." : error?.phone}
                                     />
                                 </div>
-                                {
-                                    error?.phone && (
-                                        <p className='lg:hidden font-400 text-14 leading-28 text-red-500'>
-                                            {error?.phone == "The phone field is required." ? "Phone number cannot be empty." : error?.phone}
-                                        </p>
-                                    )
-                                }
                                 <SelectInput
                                     text={string.categories}
                                     data={categories}
@@ -335,7 +325,7 @@ const SignUp = ({ ref, datas }) => {
                             </button>
                         </div>
                     ) : (
-                        <div className='w-full h-full flex flex-col justify-start items-center gap-7 lg:pt-28 lg:pr-14'>
+                        <div className='w-full h-full flex flex-col justify-center items-center gap-7 lg:pt-28 lg:pr-14'>
                             <div>
                                 <Image
                                     src={SuccessSVG}

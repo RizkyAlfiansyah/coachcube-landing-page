@@ -1,19 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react'
-import GoogleSVG from "assets/icons/icon-google.svg";
-import MetaSVG from "assets/icons/icon-meta.svg";
-import AmazonSVG from "assets/icons/icon-amazon.svg";
-import MicrosoftSVG from "assets/icons/icon-microsoft.svg";
-import TeslaSVG from "assets/icons/icon-tesla.svg";
-import JPMorganSVG from "assets/icons/icon-jpmorgan.svg";
-import WhiteCaseSVG from "assets/icons/icon-whitecase.svg";
-import GoldManSVG from "assets/icons/icon-goldman.svg";
+import GoogleSVG from "assets/icons/icon-google.png";
+import MetaSVG from "assets/icons/icon-meta.png";
+import AmazonSVG from "assets/icons/icon-amazon.png";
+import MicrosoftSVG from "assets/icons/icon-microsoft.png";
+import TeslaSVG from "assets/icons/icon-tesla.png";
+import JPMorganSVG from "assets/icons/icon-jpmorgan.png";
+import WhiteCaseSVG from "assets/icons/icon-whitecase.png";
+import GoldManSVG from "assets/icons/icon-goldman.png";
 import HarvardSVG from "assets/icons/icon-harvard.svg";
 import StanfordSVG from "assets/icons/icon-stanford.svg";
-import MorganSVG from "assets/icons/icon-morgan.svg";
+import MorganSVG from "assets/icons/icon-morgan.png";
 import OxfordSVG from "assets/icons/icon-oxford.svg";
 import CambridgeSVG from "assets/icons/icon-cambridge.svg";
-import AllenSVG from "assets/icons/icon-allen_and_overy.svg";
-import LinkLaterSVG from "assets/icons/icon-linklaters.svg";
+import AllenSVG from "assets/icons/icon-allen_and_overy.png";
+import LinkLaterSVG from "assets/icons/icon-linklaters.png";
 import Image from "next/image";
 
 const SecondSection = () => {
@@ -85,8 +85,6 @@ const SecondSection = () => {
         ],
     ];
 
-
-
     const [index, setIndex] = useState(0);
     const [tabIndex, setTabIndex] = useState(0);
     const timeoutRef = useRef(null);
@@ -145,11 +143,11 @@ const SecondSection = () => {
                 <p className="w-full text-center font-bold md:text-48 text-24 xl:leading-61 leading-31 text-primary-100">
                     Our Mentors
                 </p>
-                <p className="w-full text-center font-400 md:text-20 text-16 leading-32 text-primary-600 lg:px-44 md:px-8 xl:px-28 px-4">
+                <p className="w-full text-center font-400 md:text-24 text-16 leading-32 text-primary-600 lg:px-36 md:px-8 xl:px-28 px-4">
                     Our mentors are industry leading experts who are passionate about helping to educate and inpire the next generation
                 </p>
             </div>
-            <div className="hidden w-full md:grid lg:grid-cols-5 md:grid-cols-3 items-center justify-center xl:gap-20 lg:gap-10 md:gap-20 gap-10">
+            <div className="hidden w-full md:grid lg:grid-cols-5 md:grid-cols-3 items-center justify-items-center lg:gap-16 gap-10">
                 {
                     Array(desktopIcon.length).fill().map((_, index) => (
                         <div className="hidden lg:flex w-40 h-14" key={index}>
@@ -214,7 +212,6 @@ const SecondSection = () => {
                     ))
                 }
             </div>
-            <div className='hidden lg:flex' />
         </>
     )
 }

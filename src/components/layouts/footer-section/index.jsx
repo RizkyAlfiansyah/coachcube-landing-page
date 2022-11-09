@@ -23,7 +23,7 @@ const CountDown = () => {
         <>
             <div className="w-full flex flex-col items-start justify-start xl:px-24 xl:py-[72px] gap-4 px-6 py-12">
                 <div className="w-full flex lg:flex-row flex-col justify-between items-start border-b-1 border-primary-250 pb-6 xl:gap-0 gap-8">
-                    <div className="md:w-full lg:w-auto flex md:flex-row flex-col lg:justify-start md:justify-between lg:items-start justify-center items-center gap-2.5 md:gap-6 lg:gap-2.5">
+                    <div className="md:w-full lg:w-auto flex md:flex-row flex-col lg:justify-start md:justify-between lg:items-start justify-center items-center gap-2.5 md:gap-6 lg:gap-8">
                         <div className='md:w-1/12 lg:w-auto'>
                             <Image src={LogoSVG} alt="logo" />
                         </div>
@@ -31,7 +31,7 @@ const CountDown = () => {
                             Coachcube is an artificial intelligence education technology platform that connects student and those in the early stages of their career with indsutry professional for the purposes of mentoring via online video teleconference
                         </p>
                     </div>
-                    <div className="w-full lg:w-auto flex flex-col lg:justify-start lg:items-start md:flex-row lg:flex-col md:w-full md:justify-between justify-center items-center gap-5">
+                    <div className="w-full lg:w-auto flex flex-col lg:justify-start lg:items-start md:flex-row lg:flex-col md:w-full md:justify-between justify-start items-start gap-5">
                         <div className="flex gap-5 justify-start items-center">
                             <div>
                                 <Image src={LocationSVG} alt="logo" />

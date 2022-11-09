@@ -13,17 +13,17 @@ const Home = () => {
   return (
     <div className="snap-y snap-mandatory w-screen h-screen overflow-auto overflow-x-hidden">
       {/* Hero section */}
-      <section className="w-full md:h-screen h-[110vh] bg-hero bg-cover bg-no-repeat bg-center flex flex-col items-center justify-between lg:pt-16 pt-10">
+      <section className="w-full md:min-h-screen h-auto bg-hero bg-cover bg-no-repeat bg-center flex flex-col items-center justify-between md:gap-0 gap-20 lg:pt-16 pt-10">
         <Hero onClick={(value) => _handleRef(value)} />
       </section>
       {/* second Section */}
-      <section className="w-full flex flex-col md:h-[80vh] lg:h-screen items-center justify-between xl:py-20 lg:px-8 lg:gap-24 py-8 px-2 md:px-12 md:py-8 bg-primary-50">
+      <section className="w-full flex flex-col md:h-[60vh] lg:h-auto items-center justify-between xl:py-20 lg:px-8 xl:gap-24 lg:gap-16 py-8 lg:pb-16 px-2 md:px-12 bg-primary-50">
         <SecondSection />
       </section>
       <section className="w-full flex lg:flex-row flex-col items-center justify-between" ref={ref}>
         <SignUpSection datas={[tabs, setTabs]} />
       </section>
-      <section className="w-full lg:h-[90%] h-2/4 flex flex-col justify-start items-start z-40">
+      <section className="w-full flex flex-col justify-start items-start py-16 bg-countdown bg-cover bg-no-repeat bg-center">
         <CountdownSection />
       </section>
       <footer className="w-full flex flex-col justify-start xl:items-start items-center">

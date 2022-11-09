@@ -77,10 +77,10 @@ const Hero = ({
                 <Image src={LogoPNG} alt="Logo" width={230} height={40} className='lg:hidden' />
             </div>
             <div className="xl:w-6/12 w-full flex flex-col items-center justify-center">
-                <h1 className="xl:text-48 md:text-32 text-20 xl:font-normal font-bold text-primary-500 text-center xl:leading-80 leading-32 bg-white bg-opacity-50 xl:px-6 py-2 px-4 rounded-lg">
+                <h1 className="lg:text-48 md:text-32 text-20 lg:font-normal font-bold text-primary-500 text-center lg:leading-80 leading-32 bg-white bg-opacity-50 lg:px-6 py-2 px-4 rounded-lg">
                     1-on-1 Mentorship from
                 </h1>
-                <h1 className="xl:text-48 md:text-32 text-20 xl:font-normal font-bold text-primary-500 text-center xl:leading-80 leading-32 bg-white bg-opacity-50 xl:px-6 py-2 px-4 rounded-b-lg">
+                <h1 className="lg:text-48 md:text-32 text-20 lg:font-normal font-bold text-primary-500 text-center lg:leading-80 leading-32 bg-white bg-opacity-50 lg:px-6 py-2 px-4 rounded-b-lg">
                     Industry Experts
                 </h1>
                 <div className="flex md:flex-row flex-col items-center justify-center mt-11 gap-4 text-center font-bold text-white lg:text-20 lg:leading-25 md:text-16 md:leading-20 text-14 leading-18">
@@ -96,14 +96,15 @@ const Hero = ({
                     </button>
                 </div>
             </div>
-            <div className="hidden w-full md:flex items-center justify-around xl:gap-20 md:gap-3 bg-primary-200 bg-opacity-80 py-4 xl:px-24 md:px-4">
+            <div className="hidden w-full md:flex items-start justify-center lg:justify-between xl:gap-20 md:gap-4 bg-primary-200 bg-opacity-80 pt-8 pb-6 xl:px-24 md:px-4">
                 {icons.map((item) => (
                     <div
-                        className="w-48 flex flex-col gap-1 justify-between items-center"
+                        className="flex flex-col gap-2 justify-center items-center"
                         key={item.id}
                     >
                         <div>
-                            <Image src={item.icon} alt={item.id} className='md:w-10' />
+                            <Image src={item.icon} alt={item.id} width={72} className="md:hidden lg:flex" />
+                            <Image src={item.icon} alt={item.id} width={48} className="lg:hidden md:flex" />
                         </div>
                         <p className="font-400 lg:text-16 lg:leading-28 text-14 leading-22 text-center text-white">
                             {item.desc}
@@ -111,7 +112,7 @@ const Hero = ({
                     </div>
                 ))}
             </div>
-            <div className="w-full xl:h-auto h-48 flex flex-col xl:hidden md:hidden items-center xl:justify-center justify-between xl:gap-20 gap-5 bg-primary-200 bg-opacity-80 py-5 px-24">
+            <div className="w-full lg:h-auto h-48 flex flex-col xl:hidden md:hidden items-center xl:justify-center justify-between xl:gap-20 gap-5 bg-primary-200 bg-opacity-80 py-5 px-24">
                 <div
                     className="w-56 flex flex-col gap-1 justify-between items-center"
                 >

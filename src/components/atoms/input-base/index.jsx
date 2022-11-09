@@ -19,7 +19,7 @@ const Input = ({
                 name={name}
                 value={value}
                 placeholder={placeholder}
-                className={`${className} py-5 px-4 bg-primary-550 text-primary-100 border-1 border-primary-550 focus:ring-0 focus:outline-none rounded-lg text-20 font-400 leading-25 resize-none`}
+                className={`${className} py-5 px-4 bg-primary-550 text-primary-100 border-1 border-primary-550 focus:ring-0 focus:outline-none rounded-lg md:text-20 font-400 md:leading-25 text-16 leading-20 resize-none`}
                 onChange={onChange}
             />
         )
@@ -31,14 +31,15 @@ const Input = ({
                         <input
                             type={type}
                             pattern={type === 'tel' || type === 'number' ? '[0-9]' : ''}
-                            // placeholder={placeholder}
-                            className={`w-full py-5 px-4 text-primary-100 bg-primary-550 border-1 ${errorMessage || isLastname ? "border-red-500" : "border-primary-550"} focus:ring-0 focus:outline-none rounded-lg text-20 font-400 leading-25`}
+                            placeholder={placeholder + (required ? '*' : '')}
+                            className={`w-full py-5 px-4 text-primary-100 bg-primary-550 border-1 ${errorMessage || isLastname ? "border-red-500" : "border-primary-550"} 
+                            focus:ring-0 focus:outline-none rounded-lg md:text-20 font-400 md:leading-25 text-16 leading-20`}
                             value={value}
                             onChange={onChange}
                             required={required}
                         />
                     </div>
-                    {
+                    {/* {
                         !value && (
                             <p className='absolute top-1/3 left-5 text-20 font-400 leading-25 text-primary-950'>
                                 {placeholder}<span className={
@@ -46,7 +47,7 @@ const Input = ({
                                 }>*</span>
                             </p>
                         )
-                    }
+                    } */}
                 </div>
                 {
                     errorMessage && (
