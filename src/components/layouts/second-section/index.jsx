@@ -150,7 +150,7 @@ const SecondSection = () => {
             <div className="hidden w-full md:grid lg:grid-cols-5 md:grid-cols-3 items-center justify-items-center lg:gap-16 gap-10">
                 {
                     Array(desktopIcon.length).fill().map((_, index) => (
-                        <div className="hidden lg:flex w-40 h-14" key={index}>
+                        <div className="hidden lg:flex" key={index}>
                             <Image src={desktopIcon[index]} alt={index} />
                         </div>
                     ))
