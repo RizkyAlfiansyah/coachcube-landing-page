@@ -8,6 +8,7 @@ import FacebookSVG from "assets/icons/icon-facebook.svg";
 import TwitterSVG from "assets/icons/icon-twitter.svg";
 import YoutubeSVG from "assets/icons/icon-youtube.svg";
 import RedditSVG from "assets/icons/icon-reddit.svg";
+import Link from 'next/link';
 
 const CountDown = () => {
 
@@ -58,7 +59,11 @@ const CountDown = () => {
                         {
                             Array(socials.length).fill(0).map((_, index) => (
                                 <div key={index} className="cursor-pointer">
-                                    <Image src={socials[index]} alt="logo" />
+                                    <Link
+                                        href={"#"}
+                                    >
+                                        <Image src={socials[index]} alt="logo" />
+                                    </Link>
                                 </div>
 
                             ))

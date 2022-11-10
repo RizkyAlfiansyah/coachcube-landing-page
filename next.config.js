@@ -6,7 +6,7 @@ const nextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination: "https://landing.api-dc-tracker.my.id/api/:path*",
+        destination: "https://be.coach-cube.com/api/:path*",
       },
     ];
   },
