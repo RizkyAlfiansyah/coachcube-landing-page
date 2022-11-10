@@ -147,7 +147,7 @@ const SecondSection = () => {
                     Our mentors are industry leading experts who are passionate about helping to educate and inpire the next generation
                 </p>
             </div>
-            <div className="hidden w-full h-44 md:grid lg:grid-cols-5 md:grid-cols-3 items-center justify-items-center lg:gap-16 gap-10">
+            <div className="hidden w-full md:h-44 lg:h-auto md:grid lg:grid-cols-5 md:grid-cols-3 items-center justify-items-center lg:gap-16 gap-10">
                 {
                     Array(desktopIcon.length).fill().map((_, index) => (
                         <div className="hidden lg:flex" key={index}>
