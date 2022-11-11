@@ -333,7 +333,7 @@ const SignUp = ({ ref, datas }) => {
                                 />
                             </div>
                             <p className='font-bold text-28 leading-36 text-center text-primary-100'>You are registered!</p>
-                            <p className='w-full lg:text-justify text-justify font-normal text-20 leading-28 text-primary-100 opacity-50'>
+                            <p className='w-full lg:text-justify text-center font-normal text-20 leading-28 text-primary-100 opacity-50'>
                                 We have sent a confirmation email to <span className='font-bold'>{values.email || "coachcuba@example.com"}</span> Please press the confirmation button to confirm your registration.
                             </p>
                             <div className="w-full flex flex-col justify-center items-center gap-2.5 lg:mt-7 mt-0">
