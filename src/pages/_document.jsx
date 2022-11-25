@@ -6,7 +6,7 @@ const Document = () => {
         <Html>
             <Head>
                 <meta charSet="UTF-8" />
-                <meta property="og:image" content="https://coach-cube.com/_next/static/media/icon.7c11b4f7.png" />
+                <meta property="og:image" content="https://coach-cube.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon.70300f12.png&w=64&q=75" />
                 <meta property="og:image:type" content="image/svg" />
                 <meta property="og:url" content="https://coach-cube.com/" />
                 <meta property="og:type" content="website" />
