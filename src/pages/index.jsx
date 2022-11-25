@@ -12,7 +12,6 @@ const Home = () => {
 
   return (
     <>
-      <Header />
       <div className="snap-y snap-mandatory w-screen h-screen overflow-auto overflow-x-hidden">
         <section className="w-full md:h-auto min-h-[60vh] bg-hero bg-cover bg-no-repeat bg-center flex flex-col items-center justify-start lg:gap-[166px] md:gap-[87px] gap-20 lg:pt-16 pt-10">
           <Hero onClick={(value) => _handleRef(value)} />

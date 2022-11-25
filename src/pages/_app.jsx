@@ -1,3 +1,4 @@
+import { Header } from "components/layouts";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import "../styles/globals.css";
@@ -17,6 +18,7 @@ function MyApp({ Component, pageProps }) {
   if (typeof window !== "undefined") {
     return (
       <>
+        <Header />
         <Component {...pageProps} />
       </>
     );
