@@ -25,12 +25,16 @@ const Document = () => {
                 <meta property="og:url" content="https://coach-cube.com/" />
                 <meta property="og:type" content="website" />
                 <meta property="fb:app_id" content="your fb id" />
-                <meta property="og:title" content={photos?.title} />
+                <meta property="og:title" content="Coach-cube" />
                 <meta name="twitter:card" content="summary" />
                 <meta
                     property="og:description"
                     content="Hurray!! Yes Social Media Preview is Working"
                 />
+                <meta name="twitter:site" content="@coachcube" />
+                <meta name="twitter:url" content="https://coach-cube.com/" />
+                <meta name="twitter:title" content="Coach-cube" />
+                <meta name="twitter:description" content="Hurray!! Yes Social Media Preview is Working" />
                 <link rel="icon" href="/icon.png" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
