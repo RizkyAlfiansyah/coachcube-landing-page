@@ -6,10 +6,10 @@ const Document = () => {
         <Html>
             <Head>
                 <meta charSet="UTF-8" />
-                <meta property="og:image" content="https://coach-cube.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon.70300f12.png&w=64&q=75" />
+                <meta property="og:image" content="https://www.linkpicture.com/q/icon.png" />
                 <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="2500" />
-                <meta property="og:image:height" content="1330" />
+                <meta property="og:image:width" content="200" />
+                <meta property="og:image:height" content="200" />
                 <meta property="og:url" content="https://coach-cube.com/" />
                 <meta property="og:type" content="website" />
                 <meta property="fb:app_id" content="your fb id" />
