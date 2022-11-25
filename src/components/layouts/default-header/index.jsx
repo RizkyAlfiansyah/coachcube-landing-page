@@ -19,7 +19,7 @@ const Header = ({ photo }) => {
         <Head>
             <title>Coachcube</title>
             <meta charSet="UTF-8" />
-            <meta property="og:url" content="coach-cube.com" />
+            <meta property="og:url" content="https://coach-cube.com/" />
             <meta property="og:type" content="website" />
             <meta property="fb:app_id" content="your fb id" />
             <meta property="og:title" content={photos?.title} />
