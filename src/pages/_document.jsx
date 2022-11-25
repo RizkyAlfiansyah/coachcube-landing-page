@@ -21,7 +21,7 @@ const Document = () => {
             <Head>
                 <title>Coachcube</title>
                 <meta charSet="UTF-8" />
-                <meta property="og:image" content="https://via.placeholder.com/150/92c952" />
+                <meta property="og:image" content="https://via.placeholder.com/600/92c952" />
                 <meta property="og:image:width" content="600" />
                 <meta property="og:image:height" content="600" />
                 <meta property="og:url" content="https://coach-cube.com/" />
