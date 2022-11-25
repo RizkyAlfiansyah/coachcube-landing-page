@@ -2,26 +2,12 @@ import { Head, Html, Main, NextScript } from 'next/document'
 import React, { useEffect, useState } from 'react'
 
 const Document = () => {
-    const [photos, setPhotos] = useState([])
-
-    useEffect(() => {
-        const fetchData = async () => {
-            await fetch('https://jsonplaceholder.typicode.com/photos/1')
-                .then((response) => response.json())
-                .then((json) => {
-                    setPhotos(json)
-                })
-        }
-        fetchData()
-    }, [])
-
-    console.log(photos)
     return (
         <Html>
             <Head>
-                <title>Coachcube</title>
                 <meta charSet="UTF-8" />
-                <meta property="og:image" content="/icon.png" />
+                <meta property="og:image" content="https://coach-cube.com/_next/static/media/logo.7c11b4f7.svg" />
+                <meta property="og:image:type" content="image/svg" />
                 <meta property="og:url" content="https://coach-cube.com/" />
                 <meta property="og:type" content="website" />
                 <meta property="fb:app_id" content="your fb id" />
@@ -34,9 +20,8 @@ const Document = () => {
                 <meta name="twitter:site" content="@coachcube" />
                 <meta name="twitter:url" content="https://coach-cube.com/" />
                 <meta name="twitter:title" content="Coach-cube" />
-                <meta name="twitter:description" content="Hurray!! Yes Social Media Preview is Working" />
+                <meta name="twitter:description" content="Coachcube is an artificial intelligence education technology platform that connects student and those in the early stages of their career with industry professional for the purposes of mentoring via online video teleconference" />
                 <link rel="icon" href="/icon.png" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet" />
