@@ -29,7 +29,7 @@ const CountDown = () => {
                             <Image src={LogoSVG} alt="logo" />
                         </div>
                         <p className="lg:w-636 md:w-full font-400 text-16 leading-28 text-primary-600 md:text-start text-center">
-                            Coachcube is an artificial intelligence education technology platform that connects student and those in the early stages of their career with indsutry professional for the purposes of mentoring via online video teleconference
+                            Coachcube is an artificial intelligence education technology platform that connects student and those in the early stages of their career with industry professional for the purposes of mentoring via online video teleconference
                         </p>
                     </div>
                     <div className="w-full lg:w-auto flex flex-col lg:justify-start lg:items-start md:flex-row lg:flex-col md:w-full md:justify-between justify-start items-start gap-5">
