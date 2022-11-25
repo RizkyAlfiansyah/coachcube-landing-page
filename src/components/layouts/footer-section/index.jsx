@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import LogoSVG from "assets/icons/logo.svg";
+import LogoSVG from "assets/icons/icon.png";
 import LocationSVG from "assets/icons/icon-location.svg";
 import EmailSVG from "assets/icons/icon-email.svg";
 import InstagramSVG from "assets/icons/icon-instagram.svg";
@@ -26,7 +26,7 @@ const CountDown = () => {
                 <div className="w-full flex lg:flex-row flex-col justify-between items-start border-b-1 border-primary-250 pb-6 xl:gap-0 gap-8">
                     <div className="md:w-full lg:w-auto flex md:flex-row flex-col lg:justify-start md:justify-between lg:items-start justify-center items-center gap-2.5 md:gap-6 lg:gap-8">
                         <div className='md:w-1/12 lg:w-auto'>
-                            <Image src={LogoSVG} alt="logo" />
+                            <Image src={LogoSVG} alt="logo" width={60} height={64} />
                         </div>
                         <p className="lg:w-636 md:w-full font-400 text-16 leading-28 text-primary-600 md:text-start text-center">
                             Coachcube is an artificial intelligence education technology platform that connects student and those in the early stages of their career with industry professional for the purposes of mentoring via online video teleconference

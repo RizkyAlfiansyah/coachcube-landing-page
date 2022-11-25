@@ -6,7 +6,7 @@ const Document = () => {
         <Html>
             <Head>
                 <meta charSet="UTF-8" />
-                <meta property="og:image" content="https://coach-cube.com/_next/static/media/logo.7c11b4f7.svg" />
+                <meta property="og:image" content="https://coach-cube.com/_next/static/media/icon.7c11b4f7.png" />
                 <meta property="og:image:type" content="image/svg" />
                 <meta property="og:url" content="https://coach-cube.com/" />
                 <meta property="og:type" content="website" />
@@ -15,7 +15,7 @@ const Document = () => {
                 <meta name="twitter:card" content="summary" />
                 <meta
                     property="og:description"
-                    content="Hurray!! Yes Social Media Preview is Working"
+                    content="Coachcube is an artificial intelligence education technology platform that connects student and those in the early stages of their career with industry professional for the purposes of mentoring via online video teleconference"
                 />
                 <meta name="twitter:site" content="@coachcube" />
                 <meta name="twitter:url" content="https://coach-cube.com/" />
