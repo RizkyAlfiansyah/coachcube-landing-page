@@ -21,7 +21,7 @@ const Document = () => {
                 />
                 <meta name="twitter:site" content="@coachcube" />
                 <meta name="twitter:url" content="https://coach-cube.com/" />
-                <meta name="twitter:title" content="Coach-cube" />
+                <meta name="twitter:title" content="Coachcube" />
                 <meta name="twitter:description" content="1-on-1 Mentorship from Industry Experts" />
                 <link rel="icon" href="/icon.png" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
