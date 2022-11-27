@@ -13,7 +13,7 @@ const Document = () => {
                 <meta property="og:url" content="https://coach-cube.com/" />
                 <meta property="og:type" content="website" />
                 <meta property="fb:app_id" content="your fb id" />
-                <meta property="og:title" content="Coach-cube" />
+                <meta property="og:title" content="Coachcube" />
                 <meta name="twitter:card" content="summary" />
                 <meta
                     property="og:description"

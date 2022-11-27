@@ -99,14 +99,14 @@ const Hero = ({
             <div className="hidden w-full md:flex items-start justify-center lg:justify-between xl:gap-20 md:gap-4 bg-primary-200 bg-opacity-80 pt-8 pb-6 xl:px-24 md:px-4 lg:mt-4">
                 {icons.map((item) => (
                     <div
-                        className="flex flex-col gap-2 justify-center items-center"
+                        className="flex flex-col gap-4 justify-center items-center"
                         key={item.id}
                     >
                         <div>
                             <Image src={item.icon} alt={item.id} width={72} className="md:hidden lg:flex" />
                             <Image src={item.icon} alt={item.id} width={48} className="lg:hidden md:flex" />
                         </div>
-                        <p className="font-400 lg:text-16 lg:leading-28 text-14 leading-22 text-center text-white">
+                        <p className="2xl:w-64 font-400 lg:text-16 lg:leading-28 text-14 leading-22 text-center text-white">
                             {item.desc}
                         </p>
                     </div>
