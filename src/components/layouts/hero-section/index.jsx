@@ -31,7 +31,7 @@ const Hero = ({
         {
             id: 4,
             icon: CommunitySVG,
-            desc: "Elimante procrastination and improve efficiency with our accountability service",
+            desc: "improve efficiency with our accountability service",
         },
         {
             id: 5,
@@ -96,7 +96,7 @@ const Hero = ({
                     </button>
                 </div>
             </div>
-            <div className="hidden w-full md:flex items-start justify-center lg:justify-center 2xl:gap-20 xl:gap-8 md:gap-4 bg-primary-200 bg-opacity-80 pt-8 pb-6 xl:px-24 md:px-4 lg:mt-4">
+            <div className="hidden w-full md:flex items-start justify-center lg:justify-between 2xl:gap-20 xl:gap-16 md:gap-4 bg-primary-200 bg-opacity-80 pt-8 pb-6 xl:px-36 md:px-4 lg:mt-4">
                 {icons.map((item) => (
                     <div
                         className="flex flex-col gap-4 justify-center items-center"
@@ -106,7 +106,7 @@ const Hero = ({
                             <Image src={item.icon} alt={item.id} width={72} className="md:hidden lg:flex" />
                             <Image src={item.icon} alt={item.id} width={48} className="lg:hidden md:flex" />
                         </div>
-                        <p className="xl:w-44 font-400 lg:text-16 lg:leading-28 text-14 leading-22 text-center text-white">
+                        <p className="xl:w-44 lg:w-44 w-36 font-400 lg:text-16 lg:leading-28 text-14 leading-22 text-center text-white">
                             {item.desc}
                         </p>
                     </div>
@@ -114,7 +114,7 @@ const Hero = ({
             </div>
             <div className="w-full lg:h-auto h-48 flex flex-col xl:hidden md:hidden items-center xl:justify-center justify-between xl:gap-20 gap-5 bg-primary-200 bg-opacity-80 py-5 px-24">
                 <div
-                    className="w-56 flex flex-col gap-1 justify-between items-center"
+                    className="w-36 flex flex-col gap-1 justify-between items-center"
                 >
                     {
                         items !== [] && (
