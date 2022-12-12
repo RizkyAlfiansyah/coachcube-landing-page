@@ -17,12 +17,12 @@ const Document = () => {
                 <meta name="twitter:card" content="summary" />
                 <meta
                     property="og:description"
-                    content="1-on-1 Mentorship from Industry Experts"
+                    content="Sylvester Lewis, Managing Director at coach-cube.com"
                 />
                 <meta name="twitter:site" content="@coachcube" />
                 <meta name="twitter:url" content="https://coach-cube.com/" />
                 <meta name="twitter:title" content="Coachcube" />
-                <meta name="twitter:description" content="1-on-1 Mentorship from Industry Experts" />
+                <meta name="twitter:description" content="Sylvester Lewis, Managing Director at coach-cube.com" />
                 <link rel="icon" href="/icon.png" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
