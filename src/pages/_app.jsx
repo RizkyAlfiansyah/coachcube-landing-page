@@ -63,6 +63,7 @@ function MyApp({ Component, pageProps }) {
       })(window,document,'script','dataLayer','GTM-5DHJRSL');
       `}
         </Script>
+        <Script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=ViYXSV"></Script>
         <Component {...pageProps} />
       </>
     );
