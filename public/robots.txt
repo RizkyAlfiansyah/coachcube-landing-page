@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://coach-cube.com
+
+# Sitemaps
+Sitemap: https://coach-cube.com/sitemap.xml
