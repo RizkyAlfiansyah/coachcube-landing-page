@@ -79,22 +79,21 @@ const SignUp = () => {
         const payload = values;
         payload.is_mentor = router.pathname === '/find-a-mentor' ? false : true;
         setLoading(true);
-        console.log(payload);
-        // try {
-        //     axiosApiInstance.post('/signups', payload)
-        //         .then((res) => {
-        //             setLoading(false);
-        //             setSuccess(true);
-        //         })
-        //         .catch((err) => {
-        //             console.log(err);
-        //             setError(err.response?.data?.message);
-        //             setLoading(false);
-        //         });
-        // } catch (error) {
-        //     console.log(error);
-        //     setLoading(false);
-        // }
+        try {
+            axiosApiInstance.post('/signups', payload)
+                .then((res) => {
+                    setLoading(false);
+                    setSuccess(true);
+                })
+                .catch((err) => {
+                    console.log(err);
+                    setError(err.response?.data?.message);
+                    setLoading(false);
+                });
+        } catch (error) {
+            console.log(error);
+            setLoading(false);
+        }
     };
 
     const emptyValues = () => {
