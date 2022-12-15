@@ -85,12 +85,12 @@ const Hero = ({
                 </h1>
                 <div className="flex md:flex-row flex-col items-center justify-center mt-11 gap-4 text-center font-bold text-white lg:text-20 lg:leading-25 md:text-16 md:leading-20 text-14 leading-18">
                     <button className="lg:w-262 md:w-226 w-170 flex items-center justify-center bg-primary-710 py-4 rounded-lg hover:shadow-xl"
-                        onClick={() => onClick(0)}
+                        onClick={() => onClick('/find-a-mentor')}
                     >
                         Find a Mentor
                     </button>
                     <button className="lg:w-262 md:w-226 w-170 flex items-center justify-center text-center bg-primary-100 py-4 rounded-lg hover:shadow-xl"
-                        onClick={() => onClick(1)}
+                        onClick={() => onClick('/become-a-mentor')}
                     >
                         Become a Mentor
                     </button>

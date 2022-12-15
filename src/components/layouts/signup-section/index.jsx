@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import SignUpBG from "assets/images/sign-up-img.png";
 import SignUpMaleBG from "assets/images/signup-male.png";
-import PolygonBG from "assets/images/polygon.png";
+import ArrowSVG from "assets/icons/icon-arrow-left.svg";
 import SuccessSVG from "assets/icons/icon-success.svg";
 import InstagramSVG from "assets/icons/icon-instagram.svg";
 import FacebookSVG from "assets/icons/icon-facebook.svg";
@@ -13,9 +13,10 @@ import { Input } from "components/atoms";
 import { SelectInput } from 'components/molecules';
 import { phoneCode } from 'helpers/phone-code';
 import { axiosApiInstance } from 'helpers/axios';
+import { useRouter } from 'next/router';
 
-const SignUp = ({ ref, datas }) => {
-
+const SignUp = () => {
+    const router = useRouter();
     const [collapsed, setCollapsed] = useState(false);
     const [collapseCategory, setCollapseCategory] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -24,7 +25,6 @@ const SignUp = ({ ref, datas }) => {
         phoneCode: '+44',
         categories: 'Industry',
     });
-    const [tabs, setTabs] = datas;
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState([])
 
@@ -77,24 +77,24 @@ const SignUp = ({ ref, datas }) => {
     const _handleSubmit = () => {
         setError([]);
         const payload = values;
-        payload.is_mentor = tabs === 1 ? true : false;
+        payload.is_mentor = router.pathname === '/find-a-mentor' ? false : true;
         setLoading(true);
-
-        try {
-            axiosApiInstance.post('/signups', payload)
-                .then((res) => {
-                    setLoading(false);
-                    setSuccess(true);
-                })
-                .catch((err) => {
-                    console.log(err);
-                    setError(err.response?.data?.message);
-                    setLoading(false);
-                });
-        } catch (error) {
-            console.log(error);
-            setLoading(false);
-        }
+        console.log(payload);
+        // try {
+        //     axiosApiInstance.post('/signups', payload)
+        //         .then((res) => {
+        //             setLoading(false);
+        //             setSuccess(true);
+        //         })
+        //         .catch((err) => {
+        //             console.log(err);
+        //             setError(err.response?.data?.message);
+        //             setLoading(false);
+        //         });
+        // } catch (error) {
+        //     console.log(error);
+        //     setLoading(false);
+        // }
     };
 
     const emptyValues = () => {
@@ -114,81 +114,81 @@ const SignUp = ({ ref, datas }) => {
     return (
         <div className='w-full flex justify-start items-start bg-mix-horizontal xl:p-20 lg:p-10 xl:pr-20 2xl:gap-0 xl:gap-16 lg:gap-14'>
             <div className="relative hidden lg:w-6/12 w-full h-full lg:flex flex-col lg:gap-8 gap-6 justify-start items-start">
+                <div className='w-full flex justify-start items-center gap-4'>
+                    <div className='cursor-pointer' onClick={() => router.push('/')}>
+                        <Image src={ArrowSVG} alt="arrow" />
+                    </div>
+                    <p className='text-28 leading-36 text-white'>
+                        Back
+                    </p>
+                </div>
                 <p className="xl:w-[475px] lg:w-96 lg:text-start font-bold lg:text-28 text-24 lg:leading-36 leading-31 text-white text-center">
                     {
-                        tabs === 1 ? "Raise money for causes you believe in by becoming a mentor" : "Bespoke career advice from industry experts"
+                        router.pathname === '/find-a-mentor' ? "Raise money for causes you believe in by becoming a mentor" : "Bespoke career advice from industry experts"
                     }
                 </p>
                 <div className="w-full flex lg:justify-start justify-center lg:items-start items-center">
                     <div className="lg:w-28 w-56 h-1 rounded-sm bg-primary-300" />
                 </div>
-                <div className="w-full relative flex flex-col lg:justify-start justify-center lg:items-start items-center mt-9">
-                    <Image src={tabs === 0 ? SignUpBG : SignUpMaleBG} alt="sign up" width={604} />
-                    <div className='absolute bottom-4 left-4 flex flex-col justify-start items-start gap-2 drop-shadow-3xl'>
-                        <p className='text-white font-bold text-32 leading-25'>{tabs === 0 ? "Sarah Liu" : "James Austin"}</p>
-                        <p className='text-white font-light text-24 leading-25'>{tabs === 0 ? "Student" : "Architect"}</p>
+                <div className="w-full flex flex-col lg:justify-start justify-center lg:items-start items-center mt-9">
+                    <div className='w-full relative'>
+                        <Image src={router.pathname === '/find-a-mentor' ? SignUpBG : SignUpMaleBG} alt="sign up" width={604} />
+                        <div className='absolute bottom-4 left-4 flex flex-col justify-start items-start gap-2 drop-shadow-3xl'>
+                            <p className='text-white font-bold text-32 leading-25'>{router.pathname === '/find-a-mentor' ? "Sarah Liu" : "James Austin"}</p>
+                            <p className='text-white font-light text-24 leading-25'>{router.pathname === '/find-a-mentor' ? "Student" : "Architect"}</p>
+                        </div>
+                    </div>
+                    <div className='text-white text-opacity-50 text-16 leading-20 mt-20'>
+                        Home / {router.pathname === '/find-a-mentor' ? "Find a mentor" : "Become a mentor"}
                     </div>
                 </div>
             </div>
-            <div className="lg:w-6/12 w-full lg:h-full h-3/4 flex flex-col gap-12 lg:gap-0 justify-start items-center lg:bg-white lg:bg-none bg-mix lg:p-0 lg:py-0 py-16 pt-12 md:px-20 lg:px-0 px-6 overflow-auto" ref={ref}>
+            <div className="lg:w-6/12 w-full lg:h-full h-3/4 flex flex-col gap-12 lg:gap-0 justify-start items-start lg:bg-white lg:bg-none bg-mix lg:p-0 lg:py-0 py-16 pt-12 md:px-20 lg:px-0 px-6 overflow-auto">
                 <div className="lg:hidden w-full flex flex-col gap-4 justify-start">
+                    <div className='flex justify-start items-center gap-2'>
+                        <div className='cursor-pointer' onClick={() => router.push('/')}>
+                            <Image src={ArrowSVG} alt="arrow" height={18} width={18} />
+                        </div>
+                        <p className='text-16 leading-20 text-white'>
+                            Back
+                        </p>
+                    </div>
                     <p className="lg:text-start font-bold lg:text-28 text-24 lg:leading-36 leading-31 text-white text-center lg:px-0 px-4">
                         {
-                            tabs === 1 ? "Raise money for causes you believe in by becoming a mentor" : "Bespoke career advice from industry experts"
+                            router.pathname === '/find-a-mentor' ? "Raise money for causes you believe in by becoming a mentor" : "Bespoke career advice from industry experts"
                         }
                     </p>
                     <div className="w-full flex lg:justify-start justify-center lg:items-start items-center">
                         <div className="lg:w-28 w-56 h-1 rounded-sm bg-primary-300" />
                     </div>
                     <figure className="relative text-center mt-4 mx-auto">
-                        <Image src={tabs === 0 ? SignUpBG : SignUpMaleBG} alt="sign up" className='m-auto' />
+                        <Image src={router.pathname === '/find-a-mentor' ? SignUpBG : SignUpMaleBG} alt="sign up" className='m-auto' />
                         <figcaption className='absolute bottom-4 left-4 flex flex-col text-16 leading-14 gap-2 justify-start items-start drop-shadow-3xl'>
-                            <p className='text-white font-bold'>{tabs === 0 ? "Sarah Liu" : "James Austin"}</p>
-                            <p className='text-white font-light'>{tabs === 0 ? "Student" : "Architect"}</p>
+                            <p className='text-white font-bold'>{router.pathname === '/find-a-mentor' ? "Sarah Liu" : "James Austin"}</p>
+                            <p className='text-white font-light'>{router.pathname === '/find-a-mentor' ? "Student" : "Architect"}</p>
                         </figcaption>
                     </figure>
                 </div>
+                <p className='lg:hidden text-primary-100 text-opacity-50 text-16 leading-20 text-start'>
+                    Home / {router.pathname === '/find-a-mentor' ? "Find a mentor" : "Become a mentor"}
+                </p>
                 {
                     !success ? (
-                        <div className="w-full h-full flex flex-col justify-start items-start gap-8">
+                        <div className="w-full lg:h-full flex flex-col justify-start items-start gap-8">
                             <div className="w-full flex justify-between items-center md:px-10 lg:px-0 gap-2">
-                                <div className="w-full flex flex-col justify-center items-center gap-4 cursor-pointer"
-                                    onClick={() => {
-                                        setTabs(0)
-                                        setError([])
-                                        emptyValues()
-                                        setString({
-                                            ...string,
-                                            categories: 'Industry'
-                                        })
-                                    }}
+                                <div className="w-full flex flex-col justify-center items-center gap-4"
+                                // onClick={() => {
+                                //     setTabs(0)
+                                //     setError([])
+                                //     emptyValues()
+                                //     setString({
+                                //         ...string,
+                                //         categories: 'Industry'
+                                //     })
+                                // }}
                                 >
-                                    <p className={`font-400 xl:text-24 md:text-24 text-center text-16 md:leading-32 leading-22 text-primary-100 ${tabs === 1 && "opacity-50"}`}>Find a Mentor</p>
-                                    {
-                                        tabs === 0 ? (
-                                            <div className="w-116 h-1 rounded-sm bg-primary-450" />
-                                        ) : null
-                                    }
-                                </div>
-                                <div>
-                                    <div className="w-1 h-9 bg-primary-850" />
-                                </div>
-                                <div className="w-full flex flex-col justify-center items-center gap-4 cursor-pointer"
-                                    onClick={() => {
-                                        setTabs(1)
-                                        setError([])
-                                        emptyValues()
-                                        setString({
-                                            ...string,
-                                            categories: 'Industry'
-                                        })
-                                    }}>
-                                    <p className={`w-full lg:font-400 font-500 text-center xl:text-24 md:text-20 text-16 md:leading-32 leading-22 text-primary-100 ${tabs === 0 && "opacity-50"}`}>Become a Mentor</p>
-                                    {
-                                        tabs === 1 ? (
-                                            <div className="w-116 h-1 rounded-sm bg-primary-450" />
-                                        ) : null
-                                    }
+                                    <p className={`font-400 xl:text-24 md:text-24 text-center text-16 md:leading-32 leading-22 text-primary-100}`}>{router.pathname === '/find-a-mentor' ? "Find a Mentor" : "Become a Mentor"}</p>
+                                    <div className="w-116 h-1 rounded-sm bg-primary-450" />
                                 </div>
                             </div>
                             <div className={`w-full flex flex-col gap-4 items-start justify-start`}>

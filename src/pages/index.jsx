@@ -1,12 +1,15 @@
 import { CountdownSection, FooterSection, Header, Hero, SecondSection, SignUpSection } from "components/layouts";
+import { useRouter } from "next/router";
 import React, { useRef, useState } from "react";
 
 const Home = () => {
   const ref = useRef(null);
   const [tabs, setTabs] = useState(0);
+  const router = useRouter();
 
   const _handleRef = (value) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+    // ref.current?.scrollIntoView({ behavior: "smooth" });
+    router.push(value);
     setTabs(value);
   };
 
@@ -19,9 +22,9 @@ const Home = () => {
         <section className="w-full flex flex-col items-center justify-start xl:py-20 lg:px-8 xl:gap-24 md:gap-16 py-8 lg:pb-16 px-2 md:px-12 bg-primary-50">
           <SecondSection />
         </section>
-        <section className="w-full flex lg:flex-row flex-col items-center justify-between" ref={ref}>
+        {/* <section className="w-full flex lg:flex-row flex-col items-center justify-between" ref={ref}>
           <SignUpSection datas={[tabs, setTabs]} />
-        </section>
+        </section> */}
         <section className="w-full flex flex-col justify-start items-start py-16 bg-countdown bg-cover bg-no-repeat bg-center">
           <CountdownSection />
         </section>
