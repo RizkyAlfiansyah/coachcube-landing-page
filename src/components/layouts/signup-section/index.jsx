@@ -173,159 +173,159 @@ const SignUp = () => {
                 </p>
                 {
                     !success ? (
-                        // <div className="w-full lg:h-full flex flex-col justify-start items-start gap-8">
-                        //     <div className="w-full flex justify-between items-center md:px-10 lg:px-0 gap-2">
-                        //         <div className="w-full flex flex-col justify-center items-center gap-4"
-                        //         // onClick={() => {
-                        //         //     setTabs(0)
-                        //         //     setError([])
-                        //         //     emptyValues()
-                        //         //     setString({
-                        //         //         ...string,
-                        //         //         categories: 'Industry'
-                        //         //     })
-                        //         // }}
-                        //         >
-                        //             <p className={`font-400 xl:text-24 md:text-24 text-center text-16 md:leading-32 leading-22 text-primary-100}`}>{router.pathname === '/find-a-mentor' ? "Find a Mentor" : "Become a Mentor"}</p>
-                        //             <div className="w-116 h-1 rounded-sm bg-primary-450" />
-                        //         </div>
-                        //     </div>
-                        //     <div className={`w-full flex flex-col gap-4 items-start justify-start`}>
-                        //         <Input
-                        //             type="email"
-                        //             placeholder="Email"
-                        //             value={values.email}
-                        //             className="w-full"
-                        //             onChange={(e) => setValues({ ...values, email: e.target.value })}
-                        //             required
-                        //             errorMessage={error?.email}
-                        //         />
-                        //         {
-                        //             error?.email && (
-                        //                 <p className='lg:hidden font-400 text-14 leading-28 text-red-500'>
-                        //                     {error?.email}
-                        //                 </p>
-                        //             )
-                        //         }
-                        //         <div className="w-full flex justify-between items-start lg:gap-10 gap-4">
-                        //             <Input
-                        //                 type="text"
-                        //                 placeholder="First Name"
-                        //                 value={values.first_name}
-                        //                 className="w-1/2"
-                        //                 onChange={(e) => setValues({ ...values, first_name: e.target.value })}
-                        //                 required
-                        //                 errorMessage={(error?.first_name || error?.last_name) ? "First Name and Last Name cannot be empty" : null}
-                        //             />
-                        //             <Input
-                        //                 type="text"
-                        //                 placeholder="Last Name"
-                        //                 value={values.last_name}
-                        //                 className="w-1/2"
-                        //                 onChange={(e) => setValues({ ...values, last_name: e.target.value })}
-                        //                 required
-                        //                 isLastname={error?.first_name || error?.last_name}
-                        //             // errorMessage={(error?.first_name || error?.last_name) ? "First Name and Last Name cannot be empty" : null}
-                        //             />
-                        //         </div>
-                        //         {
-                        //             (error?.first_name || error?.last_name) ? (
-                        //                 <p className='lg:hidden font-400 text-14 leading-28 text-red-500'>
-                        //                     First Name and Last Name cannot be empty
-                        //                 </p>
-                        //             ) : null
-                        //         }
-                        //         <div className="w-full flex justify-between items-start lg:gap-8 gap-4">
-                        //             <SelectInput
-                        //                 withFilter
-                        //                 text={string.phoneCode}
-                        //                 data={dataPhonecode}
-                        //                 className="md:w-3/12 w-4/12"
-                        //                 dropdownWidth='w-58'
-                        //                 collapse={collapsed}
-                        //                 onClick={() => {
-                        //                     setCollapsed((prev) => !prev)
-                        //                     setCollapseCategory(false)
-                        //                 }}
-                        //                 onClickItem={(value) => {
-                        //                     setCollapsed(false)
-                        //                     setValues({
-                        //                         ...values,
-                        //                         country_code: value.values.replace('+', '')
-                        //                     })
-                        //                     setString({
-                        //                         ...string,
-                        //                         phoneCode: value.values
-                        //                     })
-                        //                 }}
-                        //                 filled={values.country_code}
-                        //             />
-                        //             <Input
-                        //                 type="number"
-                        //                 placeholder="Phone Number"
-                        //                 value={values.phone}
-                        //                 className="w-9/12"
-                        //                 onChange={(e) => setValues({ ...values, phone: e.target.value })}
-                        //             />
-                        //         </div>
-                        //         <SelectInput
-                        //             text={string.categories}
-                        //             data={categories}
-                        //             className="w-full"
-                        //             collapse={collapseCategory}
-                        //             category
-                        //             onClick={() => { setCollapseCategory((prev) => !prev); setCollapsed(false) }}
-                        //             onClickItem={(value) => {
-                        //                 setCollapseCategory(false)
-                        //                 setValues({
-                        //                     ...values,
-                        //                     industry_id: value.values
-                        //                 })
-                        //                 setString({
-                        //                     ...string,
-                        //                     categories: value.labels
-                        //                 })
-                        //             }}
-                        //             required
-                        //             filled={values.industry_id}
-                        //             errorMessage={error?.industry_id && "Please choose one industry."}
-                        //         />
-                        //         {
-                        //             error?.industry_id && (
-                        //                 <p className='lg:hidden font-400 text-14 leading-28 text-red-500'>
-                        //                     {error?.industry_id && "Please choose one industry."}
-                        //                 </p>
-                        //             )
-                        //         }
-                        //         <Input
-                        //             type="textarea"
-                        //             placeholder="Messages (Max 150 characters)"
-                        //             value={values.message}
-                        //             className="w-full h-[153px]"
-                        //             onChange={(e) => setValues({ ...values, message: e.target.value })}
-                        //         />
-                        //     </div>
-                        //     <button className={`${loading && "disabled:bg-primary-310"} w-full flex gap-4 justify-center items-center rounded-lg bg-primary-300 py-4 px-6 hover:shadow-xl`}
-                        //         onClick={_handleSubmit}
-                        //         disabled={loading}
-                        //     >
-                        //         {loading ? (
-                        //             <>
-                        //                 <p className='text-white font-bold text-20 leading-25'>Registering...</p>
-                        //                 <div>
-                        //                     <div className="border-t-transparent w-6 h-6 border-[3px] border-white border-solid rounded-full animate-spin"></div>
-                        //                 </div>
-                        //             </>
-                        //         )
-                        //             : <p className='text-white font-bold text-20 leading-25'>Register Now</p>
+                        <div className="w-full lg:h-full flex flex-col justify-start items-start gap-8">
+                            <div className="w-full flex justify-between items-center md:px-10 lg:px-0 gap-2">
+                                <div className="w-full flex flex-col justify-center items-center gap-4"
+                                // onClick={() => {
+                                //     setTabs(0)
+                                //     setError([])
+                                //     emptyValues()
+                                //     setString({
+                                //         ...string,
+                                //         categories: 'Industry'
+                                //     })
+                                // }}
+                                >
+                                    <p className={`font-400 xl:text-24 md:text-24 text-center text-16 md:leading-32 leading-22 text-primary-100}`}>{router.pathname === '/find-a-mentor' ? "Find a Mentor" : "Become a Mentor"}</p>
+                                    <div className="w-116 h-1 rounded-sm bg-primary-450" />
+                                </div>
+                            </div>
+                            <div className={`w-full flex flex-col gap-4 items-start justify-start`}>
+                                <Input
+                                    type="email"
+                                    placeholder="Email"
+                                    value={values.email}
+                                    className="w-full"
+                                    onChange={(e) => setValues({ ...values, email: e.target.value })}
+                                    required
+                                    errorMessage={error?.email}
+                                />
+                                {
+                                    error?.email && (
+                                        <p className='lg:hidden font-400 text-14 leading-28 text-red-500'>
+                                            {error?.email}
+                                        </p>
+                                    )
+                                }
+                                <div className="w-full flex justify-between items-start lg:gap-10 gap-4">
+                                    <Input
+                                        type="text"
+                                        placeholder="First Name"
+                                        value={values.first_name}
+                                        className="w-1/2"
+                                        onChange={(e) => setValues({ ...values, first_name: e.target.value })}
+                                        required
+                                        errorMessage={(error?.first_name || error?.last_name) ? "First Name and Last Name cannot be empty" : null}
+                                    />
+                                    <Input
+                                        type="text"
+                                        placeholder="Last Name"
+                                        value={values.last_name}
+                                        className="w-1/2"
+                                        onChange={(e) => setValues({ ...values, last_name: e.target.value })}
+                                        required
+                                        isLastname={error?.first_name || error?.last_name}
+                                    // errorMessage={(error?.first_name || error?.last_name) ? "First Name and Last Name cannot be empty" : null}
+                                    />
+                                </div>
+                                {
+                                    (error?.first_name || error?.last_name) ? (
+                                        <p className='lg:hidden font-400 text-14 leading-28 text-red-500'>
+                                            First Name and Last Name cannot be empty
+                                        </p>
+                                    ) : null
+                                }
+                                <div className="w-full flex justify-between items-start lg:gap-8 gap-4">
+                                    <SelectInput
+                                        withFilter
+                                        text={string.phoneCode}
+                                        data={dataPhonecode}
+                                        className="md:w-3/12 w-4/12"
+                                        dropdownWidth='w-58'
+                                        collapse={collapsed}
+                                        onClick={() => {
+                                            setCollapsed((prev) => !prev)
+                                            setCollapseCategory(false)
+                                        }}
+                                        onClickItem={(value) => {
+                                            setCollapsed(false)
+                                            setValues({
+                                                ...values,
+                                                country_code: value.values.replace('+', '')
+                                            })
+                                            setString({
+                                                ...string,
+                                                phoneCode: value.values
+                                            })
+                                        }}
+                                        filled={values.country_code}
+                                    />
+                                    <Input
+                                        type="number"
+                                        placeholder="Phone Number"
+                                        value={values.phone}
+                                        className="w-9/12"
+                                        onChange={(e) => setValues({ ...values, phone: e.target.value })}
+                                    />
+                                </div>
+                                <SelectInput
+                                    text={string.categories}
+                                    data={categories}
+                                    className="w-full"
+                                    collapse={collapseCategory}
+                                    category
+                                    onClick={() => { setCollapseCategory((prev) => !prev); setCollapsed(false) }}
+                                    onClickItem={(value) => {
+                                        setCollapseCategory(false)
+                                        setValues({
+                                            ...values,
+                                            industry_id: value.values
+                                        })
+                                        setString({
+                                            ...string,
+                                            categories: value.labels
+                                        })
+                                    }}
+                                    required
+                                    filled={values.industry_id}
+                                    errorMessage={error?.industry_id && "Please choose one industry."}
+                                />
+                                {
+                                    error?.industry_id && (
+                                        <p className='lg:hidden font-400 text-14 leading-28 text-red-500'>
+                                            {error?.industry_id && "Please choose one industry."}
+                                        </p>
+                                    )
+                                }
+                                <Input
+                                    type="textarea"
+                                    placeholder="Messages (Max 150 characters)"
+                                    value={values.message}
+                                    className="w-full h-[153px]"
+                                    onChange={(e) => setValues({ ...values, message: e.target.value })}
+                                />
+                            </div>
+                            <button className={`${loading && "disabled:bg-primary-310"} w-full flex gap-4 justify-center items-center rounded-lg bg-primary-300 py-4 px-6 hover:shadow-xl`}
+                                onClick={_handleSubmit}
+                                disabled={loading}
+                            >
+                                {loading ? (
+                                    <>
+                                        <p className='text-white font-bold text-20 leading-25'>Registering...</p>
+                                        <div>
+                                            <div className="border-t-transparent w-6 h-6 border-[3px] border-white border-solid rounded-full animate-spin"></div>
+                                        </div>
+                                    </>
+                                )
+                                    : <p className='text-white font-bold text-20 leading-25'>Register Now</p>
 
-                        //         }
+                                }
 
-                        //     </button>
-                        // </div>
-                        <div className='w-full'>
-                            <div className="klaviyo-form-XCgpwv"></div>
+                            </button>
                         </div>
+                        // <div className='w-full'>
+                        //     <div className="klaviyo-form-XCgpwv"></div>
+                        // </div>
                     ) : (
                         <div className='w-full h-full flex flex-col justify-center items-center gap-7 lg:pt-28 lg:pr-14'>
                             <div>
