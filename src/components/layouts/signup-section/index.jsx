@@ -111,7 +111,7 @@ const SignUp = () => {
     }
 
     return (
-        <div className='w-full flex justify-start items-start bg-mix-horizontal xl:p-20 lg:p-10 xl:pr-20 2xl:gap-0 xl:gap-16 lg:gap-14'>
+        <div className='w-full flex justify-start items-start bg-mix-horizontal xl:p-20 xl:pt-8 lg:p-10 xl:pr-20 2xl:gap-0 xl:gap-16 lg:gap-14'>
             <div className="relative hidden lg:w-6/12 w-full h-full lg:flex flex-col lg:gap-8 gap-6 justify-start items-start">
                 <div className='w-full flex justify-start items-center gap-4'>
                     <div className='cursor-pointer' onClick={() => router.push('/')}>
@@ -324,10 +324,16 @@ const SignUp = () => {
                             </button>
                         </div>
                         // <div className='w-full'>
-                        //     <div className="klaviyo-form-XCgpwv"></div>
+                        //     {
+                        //         router.pathname === "/find-a-mentor" ? (
+                        //             <div className="klaviyo-form-XCgpwv"></div>
+                        //         ) : (
+                        //             <div className="klaviyo-form-UB7Fyw"></div>
+                        //         )
+                        //     }
                         // </div>
                     ) : (
-                        <div className='w-full h-full flex flex-col justify-center items-center gap-7 lg:pt-28 lg:pr-14'>
+                        <div className='w-full h-full flex flex-col justify-center items-center gap-7 lg:pt-28 lg:pr-14 mt-20'>
                             <div>
                                 <Image
                                     src={SuccessSVG}
