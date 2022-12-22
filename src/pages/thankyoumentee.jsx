@@ -13,11 +13,6 @@ import Image from 'next/image';
 const Notification = () => {
     const router = useRouter();
 
-    useEffect(() => {
-        if (router.query.m) return;
-        router.push('/')
-    }, [router])
-
     const socials = [
         InstagramSVG,
         FacebookSVG,
@@ -41,7 +36,7 @@ const Notification = () => {
                 </div>
                 <p className='font-bold text-28 leading-36 text-center text-primary-100'>You are registered!</p>
                 <p className='lg:w-[578px] text-center font-normal text-20 leading-28 text-primary-100 opacity-50'>
-                    We have sent a confirmation email to <span className='font-bold'>{router.query?.m || "coachcuba@example.com"}</span> Please press the confirmation button to confirm your registration.
+                    We have sent a confirmation email. Please press the confirmation button to confirm your registration.
                 </p>
                 <div className="w-full flex flex-col justify-center items-center gap-2.5 lg:mt-7 mt-0">
                     <p className="font-400 text-14 leading-22 text-primary-100 opacity-50 text-center">

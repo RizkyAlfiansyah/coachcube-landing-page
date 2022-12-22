@@ -84,9 +84,9 @@ const SignUp = () => {
                 .then((res) => {
                     setLoading(false);
                     if (router.pathname === '/find-a-mentor') {
-                        router.push(`/thankyoumentee?m=${values.email}`);
+                        router.push(`/thankyoumentee`);
                     } else {
-                        router.push(`/thankyoumentor?m=${values.email}`);
+                        router.push(`/thankyoumentor`);
                     }
                 })
                 .catch((err) => {
@@ -188,8 +188,8 @@ const SignUp = () => {
                         //     })
                         // }}
                         >
-                            <p className={`font-400 xl:text-24 md:text-24 text-center text-16 md:leading-32 leading-22 text-primary-100}`}>{router.pathname === '/find-a-mentor' ? "Find a Mentor" : "Become a Mentor"}</p>
-                            <div className="w-116 h-1 rounded-sm bg-primary-450" />
+                            <p className={`xl:text-24 md:text-24 text-center text-16 md:leading-32 leading-22 text-primary-100 font-bold`}>{router.pathname === '/find-a-mentor' ? "Find a Mentor" : "Become a Mentor"}</p>
+                            <div className="w-170 h-1 rounded-sm bg-primary-450" />
                         </div>
                     </div>
                     <div className={`w-full flex flex-col gap-4 items-start justify-start`}>

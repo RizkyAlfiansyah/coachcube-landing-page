@@ -37,7 +37,7 @@ const CountDown = () => {
                             <Image src={LogoSVG} alt="logo" width={60} height={64} loading="lazy" />
                         </div>
                         <p className="lg:w-636 md:w-full font-400 text-16 leading-28 text-primary-600 md:text-start text-center">
-                            Coachcube is an artificial intelligence education technology platform that connects student and those in the early stages of their career with industry professional for the purposes of mentoring via online video teleconference
+                            Coachcube is an artificial intelligence education technology platform that connects students and those in the early stages of their career with industry professionals for the purpose of mentoring via online video teleconference
                         </p>
                     </div>
                     <div className="w-full lg:w-auto flex flex-col lg:justify-start lg:items-start md:flex-row lg:flex-col md:w-full md:justify-between justify-start items-start gap-5">
@@ -63,22 +63,24 @@ const CountDown = () => {
                     <p className="font-400 text-14 leading-22 text-primary-100 opacity-50">
                         Connect with us
                     </p>
-                    <div className="flex md:justify-start md:items-start gap-4 justify-center items-center">
-                        {
-                            Array(socials.length).fill(0).map((_, index) => (
-                                <div key={index} className="cursor-pointer">
-                                    <Link
-                                        href={links[index]}
-                                    >
-                                        <Image src={socials[index]} alt="logo" />
-                                    </Link>
-                                </div>
-                            ))
-                        }
+                    <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4">
+                        <div className='flex md:justify-start md:items-start gap-4'>
+                            {
+                                Array(socials.length).fill(0).map((_, index) => (
+                                    <div key={index} className="cursor-pointer">
+                                        <Link
+                                            href={links[index]}
+                                        >
+                                            <Image src={socials[index]} alt="logo" />
+                                        </Link>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                        <div className='w-full flex md:justify-end justify-center items-center'>
+                            <p className='font-400 text-16 leading-28 text-primary-600'>Copyright Coach Cube Limited 2023</p>
+                        </div>
                     </div>
-                </div>
-                <div className='w-full flex justify-center items-center'>
-                    <p className='font-400 text-16 leading-28 text-primary-600'>Copyright Coach Cube Limited 2023</p>
                 </div>
             </div>
         </>
