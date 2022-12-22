@@ -83,8 +83,11 @@ const SignUp = () => {
             axiosApiInstance.post('/signups', payload)
                 .then((res) => {
                     setLoading(false);
-                    // setSuccess(true);
-                    router.push(`/notification-message?m=${values.email}`);
+                    if (router.pathname === '/find-a-mentor') {
+                        router.push(`/thankyoumentee?m=${values.email}`);
+                    } else {
+                        router.push(`/thankyoumentor?m=${values.email}`);
+                    }
                 })
                 .catch((err) => {
                     console.log(err);

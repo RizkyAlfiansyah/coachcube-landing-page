@@ -18,8 +18,6 @@ const Notification = () => {
         router.push('/')
     }, [router])
 
-    console.log(router.query);
-
     const socials = [
         InstagramSVG,
         FacebookSVG,

@@ -20,6 +20,14 @@ const CountDown = () => {
         RedditSVG,
     ];
 
+    const links = [
+        "https://www.instagram.com/coachcube/",
+        "https://www.facebook.com/coachcubementors/",
+        "https://twitter.com/coachcubementor",
+        "https://www.youtube.com/channel/UC2oOMY19E7g9RJAP6H5h0GQ",
+        "https://www.reddit.com/user/Coachcube/"
+    ]
+
     return (
         <>
             <div className="w-full flex flex-col items-start justify-start xl:px-24 xl:py-[72px] gap-4 px-6 py-12">
@@ -60,7 +68,7 @@ const CountDown = () => {
                             Array(socials.length).fill(0).map((_, index) => (
                                 <div key={index} className="cursor-pointer">
                                     <Link
-                                        href={"#"}
+                                        href={links[index]}
                                     >
                                         <Image src={socials[index]} alt="logo" />
                                     </Link>
