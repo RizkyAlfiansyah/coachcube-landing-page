@@ -115,7 +115,7 @@ const SignUp = () => {
     }
 
     return (
-        <div className='w-full flex justify-start items-start bg-mix-horizontal xl:p-20 xl:pt-8 lg:p-10 xl:pr-20 2xl:gap-0 xl:gap-16 lg:gap-14'>
+        <div className='w-full flex justify-start items-start bg-mix-horizontal xl:p-20 xl:pt-8 lg:p-8 xl:pr-20 2xl:gap-0 xl:gap-16 lg:gap-14'>
             <div className="relative hidden lg:w-6/12 w-full h-full lg:flex flex-col lg:gap-8 gap-6 justify-start items-start">
                 <div className='w-full flex justify-start items-center gap-4'>
                     <div className='cursor-pointer' onClick={() => router.push('/')}>
@@ -141,6 +141,22 @@ const SignUp = () => {
                             <p className='text-white font-light text-24 leading-25'>{router.pathname === '/find-a-mentor' ? "Student" : "Architect"}</p>
                         </div>
                     </div>
+                    {
+                        router.pathname === '/find-a-mentor' ? (
+                            <p className='w-9/12 text-16 leading-28 text-white mt-12'>
+                                In an increasingly competitive job environment it is important to prepare as much as possible to give yourself the best chance of a successful job application and the best chance of early promotion.
+                                Mentorship from industry professionals is the best way to prepare for your dream career. Get insights into how to craft the perfect application, conduct practice interviews and conduct Q&A sessions with experts in your industry to make sure you are well prepared to
+                                succeed. By connecting with mentors on Coachcube you expand your professional network and in
+                                doing so you open yourself up to more potential opportunities.
+                            </p>
+                        ) : (
+                            <p className='w-9/12 text-16 leading-28 text-white mt-12'>
+                                <span className='font-bold text-20 leading-28'>Raise money for your favourite charities by becoming a mentor</span> <br /> <br />
+                                Use your years of knowledge and experience to help train students and young professionals who are keen to follow in your footsteps. Each mentor session you complete will raise money for your favourite charities whilst helping to sharpen your mentoring and
+                                communication skills and expand your network of junior professionals in your industry.
+                            </p>
+                        )
+                    }
                     <div className='text-white text-opacity-50 text-16 leading-20 mt-20'>
                         Home / {router.pathname === '/find-a-mentor' ? "Find a mentor" : "Become a mentor"}
                     </div>
@@ -172,6 +188,22 @@ const SignUp = () => {
                         </figcaption>
                     </figure>
                 </div>
+                {
+                    router.pathname === '/find-a-mentor' ? (
+                        <p className='lg:hidden w-full text-16 leading-28 lg:text-white'>
+                            In an increasingly competitive job environment it is important to prepare as much as possible to give yourself the best chance of a successful job application and the best chance of early promotion.
+                            Mentorship from industry professionals is the best way to prepare for your dream career. Get insights into how to craft the perfect application, conduct practice interviews and conduct Q&A sessions with experts in your industry to make sure you are well prepared to
+                            succeed. By connecting with mentors on Coachcube you expand your professional network and in
+                            doing so you open yourself up to more potential opportunities.
+                        </p>
+                    ) : (
+                        <p className='lg:hidden w-full text-16 leading-28 lg:text-white'>
+                            <span className='font-bold text-20 leading-28'>Raise money for your favourite charities by becoming a mentor</span> <br /> <br />
+                            Use your years of knowledge and experience to help train students and young professionals who are keen to follow in your footsteps. Each mentor session you complete will raise money for your favourite charities whilst helping to sharpen your mentoring and
+                            communication skills and expand your network of junior professionals in your industry.
+                        </p>
+                    )
+                }
                 <p className='lg:hidden text-primary-100 text-opacity-50 text-16 leading-20 text-start'>
                     Home / {router.pathname === '/find-a-mentor' ? "Find a mentor" : "Become a mentor"}
                 </p>
@@ -321,7 +353,6 @@ const SignUp = () => {
                         )
                             : <p className='text-white font-bold text-20 leading-25'>Register Now</p>
                         }
-
                     </button>
                 </div>
                 {/* <div className='w-full'>
