@@ -73,10 +73,12 @@ const CountDown = () => {
                                         <Image src={socials[index]} alt="logo" />
                                     </Link>
                                 </div>
-
                             ))
                         }
                     </div>
+                </div>
+                <div className='w-full flex justify-center items-center'>
+                    <p className='font-400 text-16 leading-28 text-primary-600'>Copyright Coach Cube Limited 2023</p>
                 </div>
             </div>
         </>
