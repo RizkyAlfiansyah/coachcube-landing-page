@@ -1,4 +1,4 @@
-import { CountdownSection, FooterSection, Header, Hero, SecondSection, SignUpSection } from "components/layouts";
+import { CountdownSection, FooterSection, Header, Hero, SecondSection, SignUpSection, ThirdSection } from "components/layouts";
 import { useRouter } from "next/router";
 import React, { useRef, useState } from "react";
 
@@ -21,6 +21,9 @@ const Home = () => {
         </section>
         <section className="w-full flex flex-col items-center justify-start xl:py-20 lg:px-8 xl:gap-24 md:gap-16 py-8 lg:pb-16 px-2 md:px-12 bg-primary-50">
           <SecondSection />
+        </section>
+        <section className="w-full flex flex-col items-center justify-start bg-white">
+          <ThirdSection />
         </section>
         {/* <section className="w-full flex lg:flex-row flex-col items-center justify-between" ref={ref}>
           <SignUpSection datas={[tabs, setTabs]} />

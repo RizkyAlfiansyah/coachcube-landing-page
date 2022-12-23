@@ -17,12 +17,12 @@ const Document = () => {
                 <meta name="twitter:card" content="summary" />
                 <meta
                     property="og:description"
-                    content="1-on-1 Mentorship from Industry Experts"
+                    content="1-on-1 career coaching from industry expert mentors"
                 />
                 <meta name="twitter:site" content="@coachcube" />
                 <meta name="twitter:url" content="https://coach-cube.com/" />
                 <meta name="twitter:title" content="Coachcube" />
-                <meta name="twitter:description" content="1-on-1 Mentorship from Industry Experts" />
+                <meta name="twitter:description" content="1-on-1 career coaching from industry expert mentors" />
                 <meta name="facebook-domain-verification" content="6s71ulvymu3vmnoyikjgfo507znykk" />
                 <link rel="icon" href="/icon.png" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />

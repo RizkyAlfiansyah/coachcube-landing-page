@@ -1,19 +1,7 @@
 import Head from 'next/head'
 import React, { useEffect, useState } from 'react'
 
-const Header = ({ photo }) => {
-    const [photos, setPhotos] = useState([])
-
-    useEffect(() => {
-        const fetchData = async () => {
-            await fetch('https://jsonplaceholder.typicode.com/photos/1')
-                .then((response) => response.json())
-                .then((json) => {
-                    setPhotos(json)
-                })
-        }
-        fetchData()
-    }, [])
+const Header = () => {
 
     return (
         <Head>

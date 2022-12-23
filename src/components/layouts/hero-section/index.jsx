@@ -78,10 +78,10 @@ const Hero = ({
             </div>
             <div className="xl:w-6/12 w-full flex flex-col items-center justify-center md:mt-6">
                 <h1 className="lg:text-48 md:text-32 text-20 font-bold text-primary-500 text-center lg:leading-80 leading-32 bg-white bg-opacity-50 lg:p-5 md:p-6 py-2 px-4 rounded-lg">
-                    1-on-1 Mentorship from
+                    1-on-1 career coaching from
                 </h1>
                 <h1 className="lg:text-48 md:text-32 text-20 font-bold text-primary-500 text-center lg:leading-80 leading-32 bg-white bg-opacity-50 lg:p-5 md:p-6 py-2 px-4 rounded-b-lg">
-                    Industry Experts
+                    industry expert mentors
                 </h1>
                 <div className="flex md:flex-row flex-col items-center justify-center mt-11 gap-4 text-center font-bold text-white lg:text-20 lg:leading-25 md:text-16 md:leading-20 text-14 leading-18">
                     <button className="lg:w-262 md:w-226 w-170 flex items-center justify-center bg-primary-710 py-4 rounded-lg hover:shadow-xl"
