@@ -24,6 +24,7 @@ const Document = () => {
                 <meta name="twitter:title" content="Coachcube" />
                 <meta name="twitter:description" content="1-on-1 career coaching from industry expert mentors" />
                 <meta name="facebook-domain-verification" content="6s71ulvymu3vmnoyikjgfo507znykk" />
+                <meta name="facebook-domain-verification" content="ezu4nppe32jvzj3ovlugicynpjj6nv&quo" />
                 <link rel="icon" href="/icon.png" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
