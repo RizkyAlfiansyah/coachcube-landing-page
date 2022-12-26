@@ -127,7 +127,7 @@ const SignUp = () => {
                 </div>
                 <p className="xl:w-[475px] lg:w-96 lg:text-start font-bold lg:text-28 text-24 lg:leading-36 leading-31 text-white text-center">
                     {
-                        router.pathname === '/find-a-mentor' ? "Raise money for causes you believe in by becoming a mentor" : "Bespoke career advice from industry experts"
+                        router.pathname === '/become-a-mentor' ? "Raise money for causes you believe in by becoming a mentor" : "Bespoke career advice from industry experts"
                     }
                 </p>
                 <div className="w-full flex lg:justify-start justify-center lg:items-start items-center">
@@ -174,7 +174,7 @@ const SignUp = () => {
                     </div>
                     <p className="lg:text-start font-bold lg:text-28 text-24 lg:leading-36 leading-31 text-white text-center lg:px-0 px-4">
                         {
-                            router.pathname === '/find-a-mentor' ? "Raise money for causes you believe in by becoming a mentor" : "Bespoke career advice from industry experts"
+                            router.pathname === '/become-a-mentor' ? "Raise money for causes you believe in by becoming a mentor" : "Bespoke career advice from industry experts"
                         }
                     </p>
                     <div className="w-full flex lg:justify-start justify-center lg:items-start items-center">
